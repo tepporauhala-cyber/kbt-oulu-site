@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KICKBOXING TEAM OULU</title>
+    <meta property="og:site_name" content="KICKBOXING TEAM" />
+    <meta property="og:title" content="Kickboxing Team Oulu - MMA, Potkunyrkkeily, Lukkopaini, BJJ" />
+    <meta property="og:description"
+        content="Kickboxing Team Oulu - Kamppailulajeja kaikentasoisille harrastajille. MMA, potkunyrkkeily, lukkopaini ja brasilialainen jujutsu." />
+    <meta property="og:image" content="images/kbt-logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --primary-light: #16213e;
+            --accent: #e94560;
+            --accent-hover: #d63851;
+            --gold: #f0a500;
+            --text: #eaeaea;
+            --text-muted: #a0a0b0;
+            --bg-dark: #1a1a2e;
+            --bg-card: rgba(26, 26, 46, 0.85);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.08);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            --radius: 16px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ===== NAVIGATION ===== */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 75px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+            filter: brightness(1.1);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text);
+            background: var(--bg-glass);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/hero-bg.jpg') center/cover no-repeat;
+            filter: brightness(0.3);
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(26, 26, 46, 0.5) 0%,
+                    rgba(26, 26, 46, 0.3) 50%,
+                    rgba(26, 26, 46, 0.95) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fff 0%, var(--gold) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #c0392b);
+            color: white;
+            box-shadow: 0 4px 20px rgba(233, 69, 96, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(233, 69, 96, 0.5);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--text);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            transform: translateY(-2px);
+        }
+
+        /* ===== SECTIONS ===== */
+        section {
+            padding: 100px 2rem;
+            position: relative;
+        }
+
+        /* Section background images */
+        .section-bg {
+            background-size: cover !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            overflow: hidden;
+        }
+
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(26, 26, 46, 0.55);
+            z-index: 0;
+        }
+
+        .section-bg>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Inter', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .accent-line {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            border-radius: 2px;
+            margin: 1rem auto;
+        }
+
+        /* ===== LAJIT (Sports) ===== */
+        #lajit {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--primary) 100%);
+        }
+
+        .sports-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .sport-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sport-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .sport-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(233, 69, 96, 0.3);
+            box-shadow: var(--shadow);
+        }
+
+        .sport-card:hover::before {
+            opacity: 1;
+        }
+
+        .sport-card .icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.15), rgba(240, 165, 0, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.8rem;
+            color: var(--accent);
+        }
+
+        .sport-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .sport-card .abbr {
+            color: var(--gold);
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        .sport-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* ===== PERUSKURSSIT ===== */
+        #peruskurssit {
+            background: var(--primary);
+            position: relative;
+        }
+
+        .course-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2.5rem;
+            align-items: center;
+        }
+
+        .course-info-list {
+            list-style: none;
+        }
+
+        .course-info-list li {
+            display: flex;
+            gap: 16px;
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .course-info-list li:last-child {
+            border-bottom: none;
+        }
+
+        .course-info-list .ci-icon {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.06);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+
+        .course-info-list strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text);
+        }
+
+        .course-info-list .ci-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .course-cta-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 48px;
+            text-align: center;
+        }
+
+        .course-cta-box h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .course-cta-box .price-big {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+        }
+
+        .course-cta-box .price-sub {
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+
+        .course-cta-box .price-student {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 32px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(233, 69, 96, 0.1), rgba(240, 165, 0, 0.05));
+            border: 1px solid rgba(233, 69, 96, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .highlight-box h4 {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ===== TREENIAJAT ===== */
+        #treeniajat {
+            background: linear-gradient(180deg, var(--primary) 0%, var(--bg-dark) 100%);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            margin-top: 2rem;
+            overflow-x: auto;
+        }
+
+        .schedule-day {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px 12px;
+            min-width: 140px;
+        }
+
+        .schedule-day h4 {
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 12px;
+        }
+
+        .schedule-item {
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .schedule-item .time {
+            font-size: 0.7rem;
+            opacity: 0.7;
+            font-weight: 400;
+        }
+
+        .s-mma {
+            background: rgba(59, 70, 180, 0.15);
+            border-left: 3px solid #3B46B4;
+            color: #7B8BFF;
+        }
+
+        .s-kb {
+            background: rgba(200, 40, 50, 0.15);
+            border-left: 3px solid #C82832;
+            color: #FF6B73;
+        }
+
+        .s-bjj {
+            background: rgba(200, 120, 0, 0.15);
+            border-left: 3px solid #C87800;
+            color: #FFB040;
+        }
+
+        .s-sw {
+            background: rgba(40, 140, 40, 0.15);
+            border-left: 3px solid #288C28;
+            color: #5CCC5C;
+        }
+
+        .s-junnu {
+            background: rgba(150, 50, 150, 0.15);
+            border-left: 3px solid #963296;
+            color: #CC66CC;
+        }
+
+        .s-peku {
+            background: rgba(100, 100, 100, 0.15);
+            border-left: 3px solid #888;
+            color: var(--text-muted);
+        }
+
+        .schedule-legend {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .legend-dot {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .legend-dot span {
+            width: 12px;
+            height: 12px;
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        /* ===== HINNASTO ===== */
+        #hinnasto {
+            background: var(--bg-dark);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
+
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--accent);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: 'SUOSITUIN';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--accent), #c0392b);
+            color: white;
+            padding: 4px 16px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .price-item:last-child {
+            border-bottom: none;
+        }
+
+        .price-item .label {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .price-item .price {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .pricing-note {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* ===== MAKSUT ===== */
+        .payment-info {
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .payment-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+        }
+
+        .payment-card h4 {
+            color: var(--gold);
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .bank-account {
+            background: rgba(240, 165, 0, 0.08);
+            border: 1px solid rgba(240, 165, 0, 0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-top: 0.75rem;
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        /* ===== YHTEYSTIEDOT ===== */
+        #yhteystiedot {
+            background: linear-gradient(180deg, var(--bg-dark) 0%, var(--primary) 100%);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+        }
+
+        .contact-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-card p,
+        .contact-card a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--gold);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: rgba(10, 10, 20, 0.9);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+        }
+
+        .social-links a:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            background: rgba(233, 69, 96, 0.1);
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 75px;
+                left: 0;
+                right: 0;
+                background: rgba(15, 15, 26, 0.98);
+                flex-direction: column;
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--border);
+                gap: 4px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .peruskurssit-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 60px 1.25rem;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="images/kbt-logo.png" alt="Kickboxing Team Logo">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" class="active">Etusivu</a></li>
+                <li><a href="#lajit">Lajit</a></li>
+                <li><a href="#peruskurssit">Peruskurssit</a></li>
+                <li><a href="#treeniajat">Treeniajat</a></li>
+                <li><a href="#hinnasto">Hinnasto & Maksut</a></li>
+                <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>Oulun <span
+                    style="text-decoration: underline; text-decoration-thickness: 4px; text-underline-offset: 8px;">menestynein</span>
+                kamppailuseura</h1>
+            <p>Potkunyrkkeily, MMA, thainyrkkely, BJJ ja lukkopaini. Huippu-urheilusta kuntoiluun &mdash; turvallisesti,
+                ilon kautta ja jatkuvasti kehittyen.</p>
+            <div class="hero-buttons">
+                <a href="#peruskurssit" class="btn btn-primary">
+                    <i class="fas fa-fist-raised"></i> Tule peruskurssille
+                </a>
+                <a href="#treeniajat" class="btn btn-outline">
+                    <i class="far fa-clock"></i> Treeniajat &rarr;
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LAJIT ===== -->
+    <section id="lajit" class="section-bg" style="background-image: url('images/hero-bg.jpg');">
+        <div class="container">
+            <div class="section-title">
+                <h2>Löydä oma lajisi</h2>
+                <div class="accent-line"></div>
+                <p>KBT tarjoaa monipuolisen valikoiman kamppailulajeja. Jokainen löytää oman juttunsa &mdash; oli
+                    tavoitteena kunto, itsepuolustus tai kilpaurheilu.</p>
+            </div>
+            <div class="sports-grid">
+                <div class="sport-card">
+                    <div class="icon"><i class="fas fa-fist-raised"></i></div>
+                    <h3>MMA / Vapaaottelu</h3>
+                    <p>Kokonaisvaltainen kamppailulaji, joka yhdistää pysty- ja mattotaistelun. KBT:n lippulaiva.</p>
+                </div>
+                <div class="sport-card">
+                    <div class="icon"><i class="fas fa-hand-fist"></i></div>
+                    <h3>Potkunyrkkeily</h3>
+                    <p>Dynaamiset lyönti- ja potkutekniikat kehittävät kuntoa, koordinaatiota ja itseluottamusta.</p>
+                </div>
+                <div class="sport-card">
+                    <div class="icon"><i class="fas fa-fire"></i></div>
+                    <h3>Thainyrkkely</h3>
+                    <p>Kahdeksan aseen taito &mdash; nyrkit, kyynärpäät, polvet ja potkut. Tehokas pystykamppailulaji.
+                    </p>
+                </div>
+                <div class="sport-card">
+                    <div class="icon"><i class="fas fa-yin-yang"></i></div>
+                    <h3>BJJ &amp; Lukkopaini</h3>
+                    <p>Brasilialainen jiu-jitsu ja submission wrestling. Tekniikka voittaa voiman matolla.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PERUSKURSSIT ===== -->
+    <section id="peruskurssit" class="section-bg" style="background-image: url('images/peruskurssit-bg.jpg');">
+        <div class="container">
+            <div class="section-title">
+                <h2>Peruskurssit</h2>
+                <div class="accent-line"></div>
+                <p>Kamppailun perusteet turvallisesti ja tehokkaasti. Ei aiempaa kokemusta tarvita.</p>
+            </div>
+            <div class="course-content">
+                <div>
+                    <ul class="course-info-list">
+                        <li>
+                            <div class="ci-icon">&#128075;</div>
+                            <div><strong>Ei ennakkoilmoittautumista</strong><span class="ci-desc">Tule paikalle oikeaan
+                                    aikaan &mdash; mukaan mahtuu 3 viikon ajan aloituksesta.</span></div>
+                        </li>
+                        <li>
+                            <div class="ci-icon">&#127919;</div>
+                            <div><strong>Kaksi ilmaista kokeilukertaa</strong><span class="ci-desc">Kokeile ensin
+                                    &mdash; sitoudu vasta kun tiedät, että tämä on sinun juttusi.</span></div>
+                        </li>
+                        <li>
+                            <div class="ci-icon">&#128085;</div>
+                            <div><strong>Tarvitset vain urheiluvaatteet</strong><span
+                                    class="ci-desc">Sisäliikuntavaatteet ja juomapullo riittävät alkuun.</span></div>
+                        </li>
+                        <li>
+                            <div class="ci-icon">&#128100;</div>
+                            <div><strong>Ikäraja 12 vuotta</strong><span class="ci-desc">Junnupainiin pääsee
+                                    9-vuotiaasta alkaen.</span></div>
+                        </li>
+                        <li>
+                            <div class="ci-icon">&#128170;</div>
+                            <div><strong>Aiempaa kokemusta?</strong><span class="ci-desc">Jos olet harrastanut
+                                    kamppailulajeja aiemmin, voit tulla suoraan mukaan lajitreeneihin ilman
+                                    peruskurssia!</span></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="course-cta-box">
+                    <h3>Peruskurssi</h3>
+                    <div class="price-big">120&euro;</div>
+                    <p class="price-sub">normaalihinta</p>
+                    <p class="price-student">90&euro; opiskelijat, koululaiset, työttömät &amp; eläkeläiset</p>
+                    <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:24px;">Sisältää vuoden jäsenmaksun
+                        (20&euro;)</p>
+                    <a href="#yhteystiedot" class="btn btn-primary"
+                        style="width:100%;text-align:center;display:block;">Ota yhteyttä</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TREENIAJAT ===== -->
+    <section id="treeniajat" class="section-bg" style="background-image: url('images/treeniajat-bg.jpg');">
+        <div class="container">
+            <div class="section-title">
+                <h2>Treeniajat</h2>
+                <div class="accent-line"></div>
+                <p>Viikon treenivalikoima kattaa kaikki tasot aloittelijasta kilpailijaan.</p>
+            </div>
+
+            <div class="schedule-legend">
+                <span class="legend-dot"><span style="background:#3B46B4"></span> MMA</span>
+                <span class="legend-dot"><span style="background:#C82832"></span> Potkunyrkkeily</span>
+                <span class="legend-dot"><span style="background:#C87800"></span> BJJ</span>
+                <span class="legend-dot"><span style="background:#288C28"></span> Lukkopaini</span>
+                <span class="legend-dot"><span style="background:#963296"></span> Junnupaini</span>
+                <span class="legend-dot"><span style="background:#888"></span> Peruskurssi</span>
+            </div>
+
+            <div class="schedule-grid">
+                <div class="schedule-day">
+                    <h4>Ma</h4>
+                    <div class="schedule-item s-mma">
+                        <div class="time">18:00</div>Pysty MMA
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">19:00</div>Pysty MMA/KB
+                    </div>
+                    <div class="schedule-item s-peku">
+                        <div class="time">20:00</div>MMA PEKU
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>Ti</h4>
+                    <div class="schedule-item s-bjj">
+                        <div class="time">17:00</div>Matto BJJ puku
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">18:00</div>Pysty MMA/KB noviisit
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">19:00</div>Pysty MMA/KB ylemmät
+                    </div>
+                    <div class="schedule-item s-kb">
+                        <div class="time">20:00</div>Potkunyrkkeily PEKU
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>Ke</h4>
+                    <div class="schedule-item s-sw">
+                        <div class="time">19:00</div>Matto nogi BJJ/SW
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>To</h4>
+                    <div class="schedule-item s-sw">
+                        <div class="time">17:00</div>Matto nogi MMA/BJJ/SW
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">18:30</div>Matto sparri MMA/BJJ/SW
+                    </div>
+                    <div class="schedule-item s-peku">
+                        <div class="time">20:00</div>MMA PEKU / BJJ PEKU
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>Pe</h4>
+                    <div class="schedule-item s-junnu">
+                        <div class="time">17:00</div>Junnupaini
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">18:00</div>Pysty MMA/KB noviisit
+                    </div>
+                    <div class="schedule-item s-mma">
+                        <div class="time">19:00</div>Pysty MMA/KB ylemmät
+                    </div>
+                    <div class="schedule-item s-kb">
+                        <div class="time">20:00</div>Potkunyrkkeily PEKU
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>La</h4>
+                    <div class="schedule-item s-mma">
+                        <div class="time">16:00</div>Pysty MMA/KB
+                    </div>
+                    <div class="schedule-item s-bjj">
+                        <div class="time">17:30</div>Matto puku BJJ/SW
+                    </div>
+                    <div class="schedule-item s-sw">
+                        <div class="time">19:00</div>Matto nogi MMA/BJJ/SW
+                    </div>
+                </div>
+                <div class="schedule-day">
+                    <h4>Su</h4>
+                    <div class="schedule-item"
+                        style="background:rgba(255,255,255,0.03);border-left:3px solid rgba(255,255,255,0.1);color:var(--text-muted)">
+                        Lepo&shy;päivä</div>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:20px;color:var(--text-muted);font-size:0.85rem;">* Aikatauluissa voi
+                tapahtua muutoksia. Seuraa somea (@kickboxingteam) ajantasaisille tiedoille.</p>
+        </div>
+    </section>
+
+    <!-- ===== HINNASTO ===== -->
+    <section id="hinnasto" class="section-bg" style="background-image: url('images/hinnasto-bg.jpg');">
+        <div class="container">
+            <div class="section-title">
+                <h2>Selkeä hinnoittelu</h2>
+                <div class="accent-line"></div>
+                <p>Kuukausimaksulla pääset kaikkiin KBT:n lajitreeneihin. Seuran jäsenmaksu 20&euro;/vuosi.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" style="text-align: center;">
+                    <h3>2 kuukautta</h3>
+                    <div style="font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 4px;">120<span
+                            style="font-size: 1.2rem; color: var(--text-muted); font-weight: 500;">&euro;</span></div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">60&euro; / kk</div>
+                    <div style="text-align: left; margin-bottom: 1.5rem;">
+                        <div class="price-item"><span class="label">✓ Kaikki lajitreenit</span></div>
+                        <div class="price-item"><span class="label">✓ Joustava aloitus</span></div>
+                        <div class="price-item"><span class="label">✓ Hyvä kokeiluun</span></div>
+                    </div>
+                    <a href="#peruskurssit" class="btn btn-outline"
+                        style="width:100%;text-align:center;display:block;">Valitse</a>
+                </div>
+                <div class="pricing-card featured" style="text-align: center;">
+                    <h3>6 kuukautta</h3>
+                    <div style="font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 4px;">280<span
+                            style="font-size: 1.2rem; color: var(--text-muted); font-weight: 500;">&euro;</span></div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">~47&euro; / kk
+                    </div>
+                    <div style="text-align: left; margin-bottom: 1.5rem;">
+                        <div class="price-item"><span class="label">✓ Kaikki lajitreenit</span></div>
+                        <div class="price-item"><span class="label">✓ Paras hinta-laatu</span></div>
+                        <div class="price-item"><span class="label">✓ Aikaa kehittyä</span></div>
+                    </div>
+                    <a href="#peruskurssit" class="btn btn-primary"
+                        style="width:100%;text-align:center;display:block;">Valitse</a>
+                </div>
+                <div class="pricing-card" style="text-align: center;">
+                    <h3>12 kuukautta</h3>
+                    <div style="font-size: 3.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 4px;">460<span
+                            style="font-size: 1.2rem; color: var(--text-muted); font-weight: 500;">&euro;</span></div>
+                    <div style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">~38&euro; / kk
+                    </div>
+                    <div style="text-align: left; margin-bottom: 1.5rem;">
+                        <div class="price-item"><span class="label">✓ Kaikki lajitreenit</span></div>
+                        <div class="price-item"><span class="label">✓ Edullisin kuukausihinta</span></div>
+                        <div class="price-item"><span class="label">✓ Sitoutuneen valinta</span></div>
+                    </div>
+                    <a href="#peruskurssit" class="btn btn-outline"
+                        style="width:100%;text-align:center;display:block;">Valitse</a>
+                </div>
+            </div>
+            <p style="text-align:center;margin-top:28px;color:var(--text-muted);font-size:0.9rem;">Kertamaksu 10&euro;
+                &bull; Maksutavat: käteinen, tilisiirto, Smartum, ePassi</p>
+
+            <!-- Collapsible payment details -->
+            <div style="text-align:center;margin-top:2rem;">
+                <button id="paymentToggle" onclick="togglePayment()" style="
+                    background: var(--bg-card);
+                    border: 1px solid var(--border);
+                    color: var(--text-muted);
+                    padding: 14px 32px;
+                    border-radius: 12px;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 10px;
+                ">
+                    <i class="fas fa-info-circle"></i> Maksuohjeet ja lisätiedot
+                    <i id="paymentArrow" class="fas fa-chevron-down"
+                        style="font-size: 0.75rem; transition: transform 0.3s;"></i>
+                </button>
+            </div>
+
+            <div id="paymentDetails" style="
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.5s ease, margin 0.3s ease, opacity 0.3s ease;
+                opacity: 0;
+                margin-top: 0;
+            ">
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div
+                        style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+                        <h4
+                            style="color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-credit-card"></i> Maksuohjeet
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Maksutavat: käteinen,
+                            tilisiirto, Smartum, ePassi</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 0.75rem;">
+                            Tilille maksaessasi:<br>Maksuun viesti: Oma Nimi, Suoritettava maksu<br><em>Esim. Mikko
+                                Mallikas, 6kk harjoitusmaksu + jäsenmaksu 2025</em></p>
+                        <div
+                            style="background: rgba(240, 165, 0, 0.08); border: 1px solid rgba(240, 165, 0, 0.2); border-radius: 8px; padding: 12px 16px; margin-top: 0.75rem; font-family: monospace; font-size: 0.95rem; color: var(--gold); letter-spacing: 1px;">
+                            Kickboxing Team ry<br>FI63 5741 4020 1631 89
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.75rem;">Esitä maksukuitti
+                            treeneissä, jolloin saat merkinnän harjoituskorttiin.</p>
+                        <p
+                            style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem; font-style: italic;">
+                            Maksettu harjoitusaika on mahdollista laittaa tauolle erikseen sopimalla, mikäli harjoittelu
+                            estyy pidemmäksi aikaa.</p>
+                    </div>
+                    <div
+                        style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+                        <h4
+                            style="color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-users"></i> Yksityis- ja ryhmätunnit
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Kysy tarjousta suoraan
+                            Lepalta (0400585287 / leif.stenius@gmail.com).</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 0.75rem;">
+                            Koululais- ja opiskelijaryhmät erittäin edullisesti!</p>
+
+                        <h4
+                            style="color: var(--gold); font-size: 1.1rem; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-shopping-bag"></i> Varusteet
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">KBT:llä on myynnissä
+                            kattava valikoima treenivarusteita. Saat kaikki tarvitsemasi treenivarusteet meidän
+                            kauttamme.</p>
+
+                        <h4
+                            style="color: var(--gold); font-size: 1.1rem; margin-top: 2rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-envelope-open-text"></i> Postiosoite
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">Kickboxing Team ry,
+                            Peikontie 1D 48, 90550 Oulu</p>
+                    </div>
+                    <div
+                        style="background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem;">
+                        <h4
+                            style="color: var(--gold); font-size: 1.1rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
+                            <i class="fas fa-shield-alt"></i> Vakuutukset ja lisenssit
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7;">KBT ei vakuuta
+                            harrastajiaan, joten pidäthän huolen että sinulla on kamppailulajit kattava vakuutus
+                            voimassa.</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 0.75rem;">
+                            Harrastajat hankkivat lisenssin sen lajin mukaan, jota pääasiallisesti harrastavat.
+                            Harrastajille on tarkoitettu H-lisenssi tai junioreille B-lisenssi.</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-top: 0.75rem;">
+                            Lisenssin voit hankkia <a href="https://www.suomisport.fi" target="_blank"
+                                style="color: var(--gold);">Suomisportin sivuilta</a>.</p>
+                        <p
+                            style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.75rem; font-style: italic;">
+                            Jos et ole varma mikä lisenssi kannattaisi ottaa, kysy rohkeasti niin me neuvomme.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function togglePayment() {
+                var el = document.getElementById('paymentDetails');
+                var arrow = document.getElementById('paymentArrow');
+                var btn = document.getElementById('paymentToggle');
+                if (el.style.maxHeight === '0px' || el.style.maxHeight === '0') {
+                    el.style.maxHeight = '1000px';
+                    el.style.opacity = '1';
+                    el.style.marginTop = '1rem';
+                    arrow.style.transform = 'rotate(180deg)';
+                    btn.style.borderColor = 'var(--gold)';
+                    btn.style.color = 'var(--gold)';
+                } else {
+                    el.style.maxHeight = '0';
+                    el.style.opacity = '0';
+                    el.style.marginTop = '0';
+                    arrow.style.transform = 'rotate(0deg)';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }
+            }
+        </script>
+    </section>
+
+    <!-- ===== YHTEYSTIEDOT ===== -->
+    <section id="yhteystiedot" style="background:#252545;padding:0;">
+        <!-- 3-column info bar -->
+        <div
+            style="max-width:1200px;margin:0 auto;padding:60px 24px 40px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;align-items:start;">
+            <!-- KBT OULU -->
+            <div>
+                <div style="font-size:1.6rem;font-weight:800;margin-bottom:12px;">KBT <span
+                        style="color:var(--accent);">OULU</span></div>
+                <p style="color:rgba(255,255,255,0.5);font-size:0.95rem;line-height:1.6;">Oulun menestynein
+                    kamppailuseura</p>
+            </div>
+            <!-- Yhteystiedot -->
+            <div>
+                <h4
+                    style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text);margin-bottom:20px;">
+                    Yhteystiedot</h4>
+                <div style="display:flex;flex-direction:column;gap:12px;">
+                    <div
+                        style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.6);font-size:0.95rem;">
+                        <i class="fas fa-map-marker-alt" style="color:var(--accent);width:16px;text-align:center;"></i>
+                        Värtön liikuntahalli, Kurkelankuja 2, 90230 Oulu
+                    </div>
+                    <div style="display:flex;align-items:center;gap:10px;font-size:0.95rem;">
+                        <i class="fas fa-envelope" style="color:var(--accent);width:16px;text-align:center;"></i>
+                        <a href="mailto:leif.stenius@gmail.com"
+                            style="color:rgba(255,255,255,0.6);text-decoration:none;">leif.stenius@gmail.com</a>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:10px;font-size:0.95rem;">
+                        <i class="fas fa-phone-alt" style="color:var(--accent);width:16px;text-align:center;"></i>
+                        <a href="tel:0400585287" style="color:rgba(255,255,255,0.6);text-decoration:none;">0400 585
+                            287</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Näytä kartta -->
+            <div>
+                <h4
+                    style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--text);margin-bottom:20px;">
+                    Treenipaikka kartalla</h4>
+                <button onclick="toggleMap()" style="
+                    background: rgba(255,255,255,0.06);
+                    border: 1px solid rgba(255,255,255,0.12);
+                    color: rgba(255,255,255,0.6);
+                    padding: 10px 20px;
+                    border-radius: 10px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: all 0.3s;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                " id="mapToggleBtn">
+                    <i class="fas fa-map-marked-alt"></i> Näytä kartta
+                    <i id="mapArrow" class="fas fa-chevron-down"
+                        style="font-size: 0.7rem; transition: transform 0.3s;"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Collapsible Map -->
+        <div id="mapContainer"
+            style="max-height:0;overflow:hidden;transition:max-height 0.5s ease,opacity 0.3s ease;opacity:0;">
+            <div style="width:100%;height:350px;">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1652.5!2d25.48!3d65.01!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjXCsDAwJzM2LjAiTiAyNcKwMjgnNDguMCJF!5e0!3m2!1sfi!2sfi!4v1"
+                    allowfullscreen loading="lazy" style="width:100%;height:100%;border:0;"></iframe>
+            </div>
+        </div>
+        <script>
+            function toggleMap() {
+                var el = document.getElementById('mapContainer');
+                var arrow = document.getElementById('mapArrow');
+                var btn = document.getElementById('mapToggleBtn');
+                if (el.style.maxHeight === '0px' || el.style.maxHeight === '0') {
+                    el.style.maxHeight = '400px';
+                    el.style.opacity = '1';
+                    arrow.style.transform = 'rotate(180deg)';
+                    btn.style.borderColor = 'var(--accent)';
+                    btn.style.color = 'var(--accent)';
+                } else {
+                    el.style.maxHeight = '0';
+                    el.style.opacity = '0';
+                    arrow.style.transform = 'rotate(0deg)';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }
+            }
+        </script>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div style="max-width:1200px;margin:0 auto;">
+            <div class="social-links">
+                <a href="https://www.instagram.com/kickboxingteam/?hl=fi" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/KBToulu" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/kbtoulu" target="_blank" aria-label="X">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+            </div>
+            <div style="display:flex;justify-content:center;gap:32px;margin-bottom:24px;flex-wrap:wrap;">
+                <a href="#lajit"
+                    style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Lajit</a>
+                <a href="#hinnasto"
+                    style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Hinnasto</a>
+                <a href="#treeniajat"
+                    style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Aikataulu</a>
+                <a href="#peruskurssit"
+                    style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Peruskurssit</a>
+                <a href="#yhteystiedot"
+                    style="color:rgba(255,255,255,0.5);text-decoration:none;font-size:0.9rem;transition:color 0.2s;">Yhteystiedot</a>
+            </div>
+            <p style="color:rgba(255,255,255,0.3);font-size:0.85rem;">&copy; 2026 Kickboxing Team Oulu ry. Kaikki
+                oikeudet pidätetään.</p>
+        </div>
+    </footer>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
+        });
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY + 100;
+            sections.forEach(section => {
+                const top = section.offsetTop;
+                const height = section.offsetHeight;
+                const id = section.getAttribute('id');
+                const link = document.querySelector(`.nav-links a[href="#${id}"]`);
+                if (link) {
+                    if (scrollY >= top && scrollY < top + height) {
+                        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
