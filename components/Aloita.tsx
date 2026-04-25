@@ -9,7 +9,7 @@ export default function Aloita() {
       <div className="container-page">
         <p className="eyebrow inline-flex items-center gap-2">
           <Wallet aria-hidden="true" size={14} />
-          Aloittaminen
+          Uudet harrastajat
         </p>
         <h2 className="mt-3 section-title">{a.title}</h2>
         <p className="mt-4 max-w-2xl text-[color:var(--color-text-muted)]">{a.intro}</p>

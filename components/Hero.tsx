@@ -18,7 +18,7 @@ export default function Hero() {
             {site.brand.name.toUpperCase()}
           </h1>
           <p className="mt-6 max-w-xl text-lg text-[color:var(--color-text-muted)]">
-            {site.brand.tagline}. {site.brand.description}
+            {site.brand.tagline}
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

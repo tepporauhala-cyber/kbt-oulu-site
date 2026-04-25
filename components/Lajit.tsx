@@ -14,7 +14,7 @@ export default function Lajit() {
     <section id="lajit" className="section">
       <div className="container-page">
         <p className="eyebrow">Lajit</p>
-        <h2 className="mt-3 section-title">Kamppailulajeja kaikentasoisille</h2>
+        <h2 className="mt-3 section-title">Lajivalikoima</h2>
         <p className="mt-4 max-w-2xl text-[color:var(--color-text-muted)]">
           Treeneihin voi tulla kokeilemaan oman kunnon ja kokemuksen mukaan. Aloittelijat ohjataan
           aluksi peruskursseille ja kokeneemmat suoraan jatkoryhmiin.
