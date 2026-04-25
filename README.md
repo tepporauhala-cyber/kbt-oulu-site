@@ -37,6 +37,8 @@ Skeema:
 - `valmentajat` — nimi, rooli, bio (lisätään myöhemmin)
 - `hinnasto` — kausimaksut. `featured: true` korostaa kortin
 - `hinnastoNotes` — lisähuomiot hinnaston alle
+- `peruskurssit` — peruskurssin tagline, intro, askeleet, vaatimukset, hinnat. `seasonNote` näyttää kausibannerin (jätä tyhjäksi piilottamiseen).
+- `aloita` — "Näin aloitat" 3-step + maksuohjeet (IBAN, viestiformaatti, maksutavat) + lisämaksut + Hyvä tietää -kortit (tauotus, yksityistunnit, vakuutus + Suomisport-linkki)
 - `media` — lehdistöjuttujen lista (otsikko, kuvaus, julkaisija, URL, kuva, julkaisupäivä)
 
 ### 1b. Media-osio — uuden jutun lisääminen

@@ -41,6 +41,43 @@ export type MediaItem = {
   publishedAt: string;
 };
 
+export type Peruskurssit = {
+  title: string;
+  tagline: string;
+  intro: string;
+  seasonNote: string;
+  joinSteps: string[];
+  requirements: Array<{ label: string; value: string }>;
+  prices: Array<{ label: string; price: string }>;
+};
+
+export type AloitaStep = { title: string; description: string };
+
+export type AloitaPayment = {
+  iban: string;
+  ibanOwner: string;
+  methods: string[];
+  messageLabel: string;
+  messageExample: string;
+};
+
+export type AloitaExtra = { label: string; price: string; note: string };
+
+export type AloitaGoodToKnow = {
+  title: string;
+  body: string;
+  link?: { label: string; url: string };
+};
+
+export type Aloita = {
+  title: string;
+  intro: string;
+  steps: AloitaStep[];
+  payment: AloitaPayment;
+  extras: AloitaExtra[];
+  goodToKnow: AloitaGoodToKnow[];
+};
+
 export type SiteContent = {
   brand: {
     name: string;
@@ -67,6 +104,8 @@ export type SiteContent = {
   valmentajat: Valmentaja[];
   hinnasto: HintaTier[];
   hinnastoNotes: string[];
+  peruskurssit: Peruskurssit;
+  aloita: Aloita;
   media: MediaItem[];
 };
 

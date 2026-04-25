@@ -43,7 +43,7 @@ export default function Hinnasto() {
                   </li>
                 ))}
               </ul>
-              <a href="#yhteystiedot" className="btn-ghost mt-6 w-full">
+              <a href="#aloita" className="btn-ghost mt-6 w-full">
                 Aloita harjoittelu
               </a>
             </li>

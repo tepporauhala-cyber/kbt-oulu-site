@@ -1,4 +1,4 @@
-import { Mail, Phone, CreditCard, Instagram } from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
 import { site } from "@/lib/content";
 
 export default function Yhteystiedot() {
@@ -12,7 +12,7 @@ export default function Yhteystiedot() {
           ohjaamme sinut oikeaan ryhmään. Voit myös kysyä etukäteen sähköpostilla tai puhelimitse.
         </p>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           <a
             href={`mailto:${site.contact.email}`}
             className="card flex items-start gap-3 hover:bg-white/[0.05]"
@@ -75,22 +75,6 @@ export default function Yhteystiedot() {
             </span>
           </a>
 
-          <div className="card flex items-start gap-3">
-            <span
-              aria-hidden="true"
-              className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[color:var(--color-accent)]/15 text-[color:var(--color-accent)]"
-            >
-              <CreditCard size={18} />
-            </span>
-            <span>
-              <span className="block text-xs uppercase tracking-wider text-[color:var(--color-text-muted)]">
-                Tilinumero
-              </span>
-              <span className="mt-1 block text-sm font-medium tabular-nums text-white">
-                {site.contact.iban}
-              </span>
-            </span>
-          </div>
         </div>
       </div>
     </section>

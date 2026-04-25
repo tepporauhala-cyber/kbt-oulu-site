@@ -89,10 +89,85 @@
     }
   ],
   "hinnastoNotes": [
-    "Opiskelijat ja työttömät -25 % todistusta vastaan.",
-    "Maksu IBAN-tilille viestikenttään harrastajan nimi ja kausi.",
-    "Ensimmäinen tutustumiskerta on aina maksuton."
+    "Kausimaksulla voit harjoitella rajattomasti kaikissa lajeissa.",
+    "Lisäksi vuosittainen jäsenmaksu 20 € (sisältyy peruskurssin hintaan ensimmäisenä vuonna).",
+    "Kertamaksu yksittäiseen treeniin 10 € — käteisellä paikan päällä.",
+    "Ensimmäiset kaksi tutustumiskertaa ovat aina veloituksetta."
   ],
+  "peruskurssit": {
+    "title": "Peruskurssit",
+    "tagline": "Aloita kamppailu turvallisesti",
+    "intro": "Peruskurssilla opit kamppailun perusteet turvallisesti ja tehokkaasti. Hinta sisältää KBT:n kuluvan vuoden jäsenmaksun (20 €).",
+    "seasonNote": "",
+    "joinSteps": [
+      "Tule paikalle hieman ennen treenin alkua — ennakkoilmoittautumista ei tarvita.",
+      "Kaksi ensimmäistä kertaa ovat veloituksetta.",
+      "Mukaan voit liittyä kolmen ensimmäisen viikon ajan.",
+      "Treeneissä kerrataan paljon, joten yksittäinen poissaolo ei haittaa."
+    ],
+    "requirements": [
+      { "label": "Ikäraja", "value": "12 v (junnupainissa 9 v)" },
+      { "label": "Tausta", "value": "Aiempaa kamppailutaustaa ei vaadita" },
+      { "label": "Varusteet", "value": "Sisäliikuntavaatteet ja juomapullo" }
+    ],
+    "prices": [
+      { "label": "Peruskurssi", "price": "120 €" },
+      { "label": "Opiskelijat, työttömät, eläkeläiset", "price": "90 €" },
+      { "label": "Toinen peruskurssi samana vuonna", "price": "55 €" }
+    ]
+  },
+  "aloita": {
+    "title": "Näin aloitat",
+    "intro": "Kausimaksulla voit harjoitella rajattomasti kaikissa lajeissa. Maksu suoritetaan tilisiirtona seuran tilille.",
+    "steps": [
+      {
+        "title": "Tule kokeilemaan",
+        "description": "Kaksi ensimmäistä kertaa ovat veloituksetta. Tule paikalle hieman ennen treenin alkua — ohjaamme sinut sopivaan ryhmään."
+      },
+      {
+        "title": "Valitse kausi",
+        "description": "Yksi kausimaksu sisältää rajattoman harjoittelun kaikissa lajeissa: 2 kk, 6 kk tai 12 kk."
+      },
+      {
+        "title": "Maksa tilille",
+        "description": "Tilisiirto, käteinen, Smartum tai ePassi. Esitä kuitti treeneissä — saat merkinnän harjoituskorttiin."
+      }
+    ],
+    "payment": {
+      "iban": "FI63 5741 4020 1631 89",
+      "ibanOwner": "Kickboxing Team ry",
+      "methods": ["Tilisiirto", "Käteinen", "Smartum", "ePassi"],
+      "messageLabel": "Maksuviesti",
+      "messageExample": "Etunimi Sukunimi, 6 kk harjoitusmaksu + jäsenmaksu"
+    },
+    "extras": [
+      {
+        "label": "Jäsenmaksu",
+        "price": "20 € / vuosi",
+        "note": "Kausimaksun lisäksi kerran vuodessa. Sisältyy peruskurssin hintaan ensimmäisenä vuonna."
+      },
+      {
+        "label": "Kertamaksu",
+        "price": "10 €",
+        "note": "Käteisellä ennen treenin alkua, kun haluat käydä yksittäisellä tunnilla."
+      }
+    ],
+    "goodToKnow": [
+      {
+        "title": "Tauotus",
+        "body": "Maksettu harjoitusaika voidaan laittaa tauolle erikseen sopimalla, jos harjoittelu estyy pidemmäksi aikaa."
+      },
+      {
+        "title": "Yksityistunnit",
+        "body": "Yksityis- ja ryhmätunneista voi kysyä tarjousta suoraan Lepalta. Koululais- ja opiskelijaryhmille edulliset hinnat."
+      },
+      {
+        "title": "Vakuutus ja lisenssi",
+        "body": "KBT ei vakuuta harrastajiaan. Hanki kamppailulajit kattava vakuutus ja lisenssi Suomisportista — H-lisenssi harrastajille tai A-lisenssi kilpailijoille (B-lisenssi junioreille).",
+        "link": { "label": "Suomisport", "url": "https://www.suomisport.fi/" }
+      }
+    ]
+  },
   "media": [
     {
       "title": "Kickboxing Team Oulu menestyi SM-kisoissa ylivoimaisesti",

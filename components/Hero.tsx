@@ -22,7 +22,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <a href="#yhteystiedot" className="btn-primary">
+            <a href="#aloita" className="btn-primary">
               Tule kokeilemaan
               <ArrowRight aria-hidden="true" size={18} />
             </a>

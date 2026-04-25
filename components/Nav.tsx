@@ -9,9 +9,9 @@ const links = [
   { href: "#lajit", label: "Lajit" },
   { href: "#valmentajat", label: "Valmentajat" },
   { href: "#hinnasto", label: "Hinnasto" },
+  { href: "#aloita", label: "Aloita" },
   { href: "#treeniajat", label: "Treeniajat" },
   { href: "#sijainti", label: "Sijainti" },
-  { href: "#media", label: "Media" },
   { href: "#yhteystiedot", label: "Yhteystiedot" },
 ];
 
@@ -65,7 +65,7 @@ export default function Nav() {
           ))}
         </ul>
 
-        <a href="#yhteystiedot" className="hidden lg:inline-flex btn-primary">
+        <a href="#aloita" className="hidden lg:inline-flex btn-primary">
           Tule kokeilemaan
         </a>
 
@@ -96,7 +96,7 @@ export default function Nav() {
             ))}
             <li className="px-4 pt-2">
               <a
-                href="#yhteystiedot"
+                href="#aloita"
                 onClick={() => setOpen(false)}
                 className="btn-primary w-full"
               >
