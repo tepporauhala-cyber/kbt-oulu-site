@@ -162,7 +162,11 @@ export default function MaksuModal() {
                   className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
                 >
                   <h4 className="text-sm font-semibold text-white">{item.title}</h4>
-                  <p className="mt-1.5 text-xs text-[color:var(--color-text-muted)]">{item.body}</p>
+                  <div className="mt-1.5 flex flex-col gap-2 text-xs text-[color:var(--color-text-muted)]">
+                    {(Array.isArray(item.body) ? item.body : [item.body]).map((para, idx) => (
+                      <p key={idx}>{para}</p>
+                    ))}
+                  </div>
                   {item.link && (
                     <a
                       href={item.link.url}

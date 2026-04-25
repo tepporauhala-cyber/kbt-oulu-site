@@ -75,7 +75,7 @@ export type Lisamaksu = { label: string; price: string; note: string };
 
 export type AloitaGoodToKnow = {
   title: string;
-  body: string;
+  body: string | string[];
   link?: { label: string; url: string };
 };
 

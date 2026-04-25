@@ -169,7 +169,12 @@
       },
       {
         "title": "Vakuutus ja lisenssi",
-        "body": "KBT ei vakuuta harrastajiaan. Hanki kamppailulajit kattava vakuutus ja lisenssi Suomisportista — H-lisenssi harrastajille tai A-lisenssi kilpailijoille (B-lisenssi junioreille).",
+        "body": [
+          "KBT ei vakuuta harrastajiaan — hanki kamppailulajit kattava vakuutus ja lisenssi Suomisportista. Lisenssi ja vakuutus ovat voimassa kalenterivuosittain.",
+          "Harrastajille H-lisenssi (junioreille B-lisenssi). Harrastajat hankkivat lisenssin sen lajin mukaan, jota pääasiallisesti harrastavat.",
+          "Kilpailijoille A-lisenssi (junioreille B-lisenssi). Vapaaottelun vakuutus kattaa kilpailemisen myös potkunyrkkeilyssä; toisen lajin vakuutusta käytettäessä maksetaan lisäksi kilpaillun lajin liiton lisenssiosuus.",
+          "Jos olet epävarma mikä lisenssi sopii, kysy rohkeasti — me neuvomme."
+        ],
         "link": { "label": "Suomisport", "url": "https://www.suomisport.fi/" }
       }
     ]
