@@ -1,5 +1,6 @@
 "use client";
 
+import { Fragment } from "react";
 import { GraduationCap, Check, Calendar } from "lucide-react";
 import { site } from "@/lib/content";
 import { openMaksuModal } from "@/lib/maksuModal";
@@ -47,16 +48,16 @@ export default function Peruskurssit() {
 
             <div>
               <h3 className="text-lg font-semibold text-white">Mitä tarvitset?</h3>
-              <ul className="mt-4 flex flex-col gap-2 text-sm text-[color:var(--color-text-muted)]">
+              <dl className="mt-4 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2 text-sm text-[color:var(--color-text-muted)]">
                 {pk.requirements.map((req) => (
-                  <li key={req.label} className="flex items-baseline gap-3">
-                    <span className="text-xs uppercase tracking-wider text-[color:var(--color-accent)]">
+                  <Fragment key={req.label}>
+                    <dt className="text-xs uppercase tracking-wider text-[color:var(--color-accent)] self-baseline">
                       {req.label}
-                    </span>
-                    <span>{req.value}</span>
-                  </li>
+                    </dt>
+                    <dd className="self-baseline">{req.value}</dd>
+                  </Fragment>
                 ))}
-              </ul>
+              </dl>
             </div>
           </div>
 

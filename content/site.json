@@ -74,21 +74,21 @@
       "id": "kausi-2",
       "name": "2 kuukautta",
       "price": "120 €",
-      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Sopii kokeiluun"],
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "n. 60 € / kk"],
       "featured": false
     },
     {
       "id": "kausi-6",
       "name": "6 kuukautta",
       "price": "280 €",
-      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Paras hinta-laatusuhde"],
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "n. 47 € / kk"],
       "featured": true
     },
     {
       "id": "kausi-12",
       "name": "12 kuukautta",
       "price": "460 €",
-      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Edullisin pitkäaikaiselle"],
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "n. 38 € / kk"],
       "featured": false
     }
   ],
