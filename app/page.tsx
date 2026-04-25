@@ -1,11 +1,12 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Lajit from "@/components/Lajit";
-import Peruskurssit from "@/components/Peruskurssit";
 import Valmentajat from "@/components/Valmentajat";
+import Peruskurssit from "@/components/Peruskurssit";
 import Aloita from "@/components/Aloita";
 import Hinnasto from "@/components/Hinnasto";
 import Treeniajat from "@/components/Treeniajat";
+import SectionBanner from "@/components/SectionBanner";
 import Sijainti from "@/components/Sijainti";
 import Media from "@/components/Media";
 import Yhteystiedot from "@/components/Yhteystiedot";
@@ -26,8 +27,10 @@ export default function HomePage() {
         <Aloita />
         <Hinnasto />
         <Treeniajat />
+        <SectionBanner src="/images/photos/voittaja3.jpg" />
         <Media />
         <Sijainti />
+        <SectionBanner src="/images/photos/keha.jpg" />
         <Yhteystiedot />
       </main>
       <Footer />
