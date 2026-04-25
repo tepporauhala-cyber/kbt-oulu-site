@@ -41,6 +41,14 @@ export type MediaItem = {
   publishedAt: string;
 };
 
+export type AjankohtaistaItem = {
+  date: string;
+  title: string;
+  body?: string;
+  url: string;
+  kicker?: string;
+};
+
 export type Peruskurssit = {
   title: string;
   tagline: string;
@@ -107,6 +115,7 @@ export type SiteContent = {
   peruskurssit: Peruskurssit;
   aloita: Aloita;
   media: MediaItem[];
+  ajankohtaista: AjankohtaistaItem[];
 };
 
 export const site: SiteContent = siteData as SiteContent;

@@ -40,7 +40,8 @@ Skeema:
 - `lisamaksut` — Hinnaston "Muut maksut" -kortin sisältö (Jäsenmaksu, Kertamaksu, Yksityistunnit ym.)
 - `peruskurssit` — Peruskurssit-osion tagline, intro, askeleet ja vaatimukset. `seasonNote` näyttää kausibannerin (jätä tyhjäksi piilottamiseen). `prices` näkyy Hinnaston Peruskurssi-kortissa.
 - `aloita` — "Näin aloitat" 3-step näkyy omana osionaan ennen Hinnastoa. `aloita.payment` (IBAN, viestiformaatti, maksutavat) ja `aloita.goodToKnow` (tauotus, vakuutus + Suomisport-linkki) renderöityvät modaalissa joka aukeaa Hinnaston "Aloita harjoittelu" -napista.
-- `media` — lehdistöjuttujen lista (otsikko, kuvaus, julkaisija, URL, kuva, julkaisupäivä)
+- `media` — lehdistöjuttujen lista (otsikko, kuvaus, julkaisija, URL, kuva, julkaisupäivä). Renderöityy "Lehdistössä"-osion vasemmalla.
+- `ajankohtaista` — pienet seurakuulumiset oikealla palstalla (date, title, body, url, kicker). Klikki avaa URL:n uuteen välilehteen — esim. IG-postaus tai -profiili. Tyhjä lista piilottaa palstan.
 
 ### 1b. Media-osio — uuden jutun lisääminen
 
