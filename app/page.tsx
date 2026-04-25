@@ -26,8 +26,8 @@ export default function HomePage() {
         <Aloita />
         <Hinnasto />
         <Treeniajat />
-        <Sijainti />
         <Media />
+        <Sijainti />
         <Yhteystiedot />
       </main>
       <Footer />
