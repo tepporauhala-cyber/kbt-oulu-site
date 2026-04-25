@@ -12,7 +12,7 @@ export default function JsonLd() {
     logo: `${SITE_URL}/images/logo.png`,
     image: `${SITE_URL}/images/logo.png`,
     description: site.brand.description,
-    foundingDate: "2002",
+    foundingDate: "2000",
     address: {
       "@type": "PostalAddress",
       streetAddress: site.contact.address.street,

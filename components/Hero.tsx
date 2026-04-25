@@ -12,7 +12,7 @@ export default function Hero() {
         <div>
           <p className="eyebrow inline-flex items-center gap-2">
             <Calendar aria-hidden="true" size={14} />
-            {site.contact.address.city} · Vuodesta 2002
+            {site.contact.address.city} · Vuodesta 2000
           </p>
           <h1 className="mt-4 section-title text-5xl sm:text-6xl lg:text-7xl">
             {site.brand.name.toUpperCase()}
@@ -51,7 +51,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--color-bg)] via-transparent to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6">
               <p className="font-[family-name:var(--font-display)] text-3xl tracking-wider text-white">
-                EST. 2002
+                EST. 2000
               </p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[color:var(--color-text-muted)]">
                 Värtön liikuntahalli · Oulu
