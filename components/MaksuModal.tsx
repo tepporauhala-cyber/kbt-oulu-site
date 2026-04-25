@@ -153,7 +153,7 @@ export default function MaksuModal() {
 
         {site.lisamaksut.length > 0 && (
           <section className="mt-6">
-            <p className="eyebrow">Lisämaksut</p>
+            <p className="eyebrow">Muut maksut</p>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
               {site.lisamaksut.map((item) => (
                 <li

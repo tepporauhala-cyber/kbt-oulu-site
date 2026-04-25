@@ -165,7 +165,7 @@
       "ibanOwner": "Kickboxing Team ry",
       "methods": ["Tilisiirto", "Käteinen", "Smartum", "ePassi"],
       "messageLabel": "Maksuviesti",
-      "messageExample": "Etunimi Sukunimi, 6 kk harjoitusmaksu + jäsenmaksu"
+      "messageExample": "Etunimi Sukunimi, esim. 6 kk harjoitusmaksu + jäsenmaksu"
     },
     "goodToKnow": [
       {
