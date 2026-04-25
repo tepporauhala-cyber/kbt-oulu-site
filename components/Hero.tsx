@@ -8,7 +8,7 @@ export default function Hero() {
       id="hero"
       className="hero-gradient relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32"
     >
-      <div className="container-page grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-center">
+      <div className="container-page grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:items-stretch">
         <div>
           <p className="eyebrow inline-flex items-center gap-2">
             <Calendar aria-hidden="true" size={14} />
@@ -37,7 +37,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="relative aspect-[4/5] w-full max-w-md justify-self-center lg:justify-self-end">
+        <div className="relative aspect-[4/5] w-full max-w-md justify-self-center lg:aspect-auto lg:justify-self-end">
           <div className="absolute inset-0 -rotate-2 rounded-3xl bg-[color:var(--color-accent)]/30 blur-2xl" />
           <div className="relative h-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/50">
             <Image
