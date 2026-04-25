@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0f1020;
+  --color-bg-soft: #16182f;
+  --color-surface: #1a1d36;
+  --color-surface-2: #20243f;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text: #f1f1f4;
+  --color-text-muted: #a8a9b8;
+  --color-accent: #e94560;
+  --color-accent-hover: #f25b74;
+  --color-gold: #f0a500;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: var(--font-bebas), var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-[color:var(--color-border)];
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  ::selection {
+    background: var(--color-accent);
+    color: white;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    letter-spacing: 0.01em;
+    line-height: 1.1;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[color:var(--color-accent)] px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-[color:var(--color-accent)]/30 transition hover:bg-[color:var(--color-accent-hover)] hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-3;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10 hover:-translate-y-0.5;
+  }
+
+  .section {
+    @apply py-20 sm:py-24;
+  }
+
+  .section-title {
+    @apply font-[family-name:var(--font-display)] text-4xl sm:text-5xl tracking-wide;
+  }
+
+  .eyebrow {
+    @apply text-[color:var(--color-accent)] uppercase text-xs font-semibold tracking-[0.2em];
+  }
+
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition;
+  }
+}
+
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 20%, rgba(233, 69, 96, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 60% at 80% 70%, rgba(240, 165, 0, 0.12), transparent 60%),
+    linear-gradient(180deg, #0f1020 0%, #16182f 100%);
+}
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}

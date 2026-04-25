@@ -1,0 +1,98 @@
+{
+  "$schema": "./site.schema.json",
+  "brand": {
+    "name": "Kickboxing Team Oulu",
+    "shortName": "KBT",
+    "tagline": "Kamppailulajeja kaikentasoisille — vuodesta 2002",
+    "description": "Kickboxing Team Oulu on oululainen kamppailulajiseura. Valikoimassa MMA, potkunyrkkeily, thainyrkkeily ja brasilialainen jujutsu. Tervetuloa kokeilemaan ensimmäinen treeni veloituksetta."
+  },
+  "contact": {
+    "email": "leif.stenius@gmail.com",
+    "phone": "0400 585 287",
+    "phoneTel": "+358400585287",
+    "iban": "FI63 5741 4020 1631 89",
+    "address": {
+      "venue": "Värtön liikuntahalli",
+      "street": "Kurkelankuja 2",
+      "postalCode": "90230",
+      "city": "Oulu"
+    },
+    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.2!2d25.476!3d65.0094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjXCsDAwJzMzLjgiTiAyNcKwMjgnMzMuNiJF!5e0!3m2!1sfi!2sfi!4v1700000000000",
+    "mapsLinkUrl": "https://maps.google.com/?q=V%C3%A4rt%C3%B6n+liikuntahalli+Kurkelankuja+2+Oulu"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/kickboxingteam/",
+    "instagramHandle": "@kickboxingteam",
+    "facebook": "https://www.facebook.com/kickboxingteam",
+    "twitter": "https://twitter.com/kickboxingteam"
+  },
+  "lajit": [
+    {
+      "id": "mma",
+      "name": "MMA",
+      "icon": "swords",
+      "description": "Vapaaottelu yhdistää lyönnit, potkut, painin ja sidontatekniikat. Soveltuu sekä kilpailijoille että kuntoharrastajille."
+    },
+    {
+      "id": "potkunyrkkeily",
+      "name": "Potkunyrkkeily",
+      "icon": "shield",
+      "description": "Klassinen kickboxing — nyrkit ja potkut. Erinomainen pohja kamppailulajiharjoittelulle ja kunnolle."
+    },
+    {
+      "id": "thainyrkkeily",
+      "name": "Thainyrkkeily",
+      "icon": "flame",
+      "description": "Muay thai eli kahdeksan raajan taito: nyrkit, potkut, polvet ja kyynärpäät. Tehokasta voima- ja kuntoharjoittelua."
+    },
+    {
+      "id": "bjj",
+      "name": "Brasilialainen jujutsu",
+      "icon": "users",
+      "description": "Mattokamppailu ja sidonnat. Tekninen laji, joka kehittää ongelmanratkaisukykyä ja kehonhallintaa."
+    }
+  ],
+  "valmentajat": [
+    {
+      "name": "Lisätään pian",
+      "role": "Päävalmentaja",
+      "bio": "Valmentajien tiedot lisätään lähiaikoina."
+    }
+  ],
+  "hinnasto": [
+    {
+      "id": "kausi-2",
+      "name": "2 kuukautta",
+      "price": "120 €",
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Sopii kokeiluun"],
+      "featured": false
+    },
+    {
+      "id": "kausi-6",
+      "name": "6 kuukautta",
+      "price": "280 €",
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Paras hinta-laatusuhde"],
+      "featured": true
+    },
+    {
+      "id": "kausi-12",
+      "name": "12 kuukautta",
+      "price": "460 €",
+      "perks": ["Rajaton harjoittelu", "Kaikki lajit", "Edullisin pitkäaikaiselle"],
+      "featured": false
+    }
+  ],
+  "hinnastoNotes": [
+    "Opiskelijat ja työttömät -25 % todistusta vastaan.",
+    "Maksu IBAN-tilille viestikenttään harrastajan nimi ja kausi.",
+    "Ensimmäinen tutustumiskerta on aina maksuton."
+  ],
+  "instagramPosts": [
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-1.svg", "alt": "Instagram-kuva 1 — lisätään pian" },
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-2.svg", "alt": "Instagram-kuva 2 — lisätään pian" },
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-3.svg", "alt": "Instagram-kuva 3 — lisätään pian" },
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-4.svg", "alt": "Instagram-kuva 4 — lisätään pian" },
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-5.svg", "alt": "Instagram-kuva 5 — lisätään pian" },
+    { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-6.svg", "alt": "Instagram-kuva 6 — lisätään pian" }
+  ]
+}

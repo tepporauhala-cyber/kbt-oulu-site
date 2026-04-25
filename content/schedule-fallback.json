@@ -1,0 +1,12 @@
+{
+  "updatedAt": "2026-04-01",
+  "rows": [
+    { "day": "Maanantai", "start": "17:30", "end": "18:30", "sport": "Potkunyrkkeily", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Maanantai", "start": "18:30", "end": "20:00", "sport": "MMA", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Tiistai", "start": "17:30", "end": "19:00", "sport": "Thainyrkkeily", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Keskiviikko", "start": "18:00", "end": "19:30", "sport": "BJJ", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Torstai", "start": "17:30", "end": "19:00", "sport": "Potkunyrkkeily", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Perjantai", "start": "18:00", "end": "19:30", "sport": "MMA", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" },
+    { "day": "Lauantai", "start": "11:00", "end": "12:30", "sport": "Avoin matto", "coach": "Lisätään pian", "hall": "Värtön liikuntahalli" }
+  ]
+}
