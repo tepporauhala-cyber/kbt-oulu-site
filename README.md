@@ -77,10 +77,18 @@ Jos muuttujaa ei ole, sivu näyttää `content/schedule-fallback.json` -tiedosto
 
 ### 3. Logo & hero-tausta
 
-- Logo: `public/images/logo.png` (käytetään Navissa, herossa ja footerissa)
+- Logo: `public/images/logo.png` (käytetään Navissa ja footerissa)
 - Hero-tausta: `public/images/hero-bg.jpg`
 
 Korvaa tiedostot suoraan, säilytä samat tiedostonimet.
+
+Jos uudessa logossa on valkoinen tausta, voit poistaa sen läpinäkyväksi:
+
+```bash
+node scripts/remove-white-bg.mjs public/images/logo.png public/images/logo.png 18
+```
+
+Toleranssi (viimeinen luku) säätää kuinka lähellä valkoista pikseli muuttuu läpinäkyväksi — 18 on hyvä oletus, nosta jos jotain valkeaa jää näkyviin.
 
 ## Hakemistorakenne
 
