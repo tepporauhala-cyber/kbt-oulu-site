@@ -101,6 +101,30 @@ export default function MaksuModal() {
           </dl>
         </section>
 
+        {site.peruskurssit.prices.length > 0 && (
+          <section className="mt-6">
+            <p className="eyebrow">Peruskurssi</p>
+            <ul className="mt-3 flex flex-col divide-y divide-white/5 rounded-xl border border-white/10 bg-white/[0.03] px-4">
+              {site.peruskurssit.prices.map((p) => (
+                <li key={p.label} className="flex items-baseline justify-between gap-4 py-3">
+                  <span className="text-sm text-[color:var(--color-text-muted)]">{p.label}</span>
+                  <span className="font-[family-name:var(--font-display)] text-xl tracking-wide text-white">
+                    {p.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-2 text-xs text-[color:var(--color-text-muted)]">
+              Hinta sisältää KBT:n kuluvan vuoden jäsenmaksun (20 €).
+            </p>
+            {site.peruskurssit.seasonNote && (
+              <p className="mt-3 inline-flex items-start gap-2 rounded-lg border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/10 px-3 py-2 text-xs text-[color:var(--color-accent)]">
+                {site.peruskurssit.seasonNote}
+              </p>
+            )}
+          </section>
+        )}
+
         {site.hinnasto.length > 0 && (
           <section className="mt-6">
             <p className="eyebrow">Kausimaksut</p>
@@ -124,30 +148,6 @@ export default function MaksuModal() {
                 </li>
               ))}
             </ul>
-          </section>
-        )}
-
-        {site.peruskurssit.prices.length > 0 && (
-          <section className="mt-6">
-            <p className="eyebrow">Peruskurssi</p>
-            <ul className="mt-3 flex flex-col divide-y divide-white/5 rounded-xl border border-white/10 bg-white/[0.03] px-4">
-              {site.peruskurssit.prices.map((p) => (
-                <li key={p.label} className="flex items-baseline justify-between gap-4 py-3">
-                  <span className="text-sm text-[color:var(--color-text-muted)]">{p.label}</span>
-                  <span className="font-[family-name:var(--font-display)] text-xl tracking-wide text-white">
-                    {p.price}
-                  </span>
-                </li>
-              ))}
-            </ul>
-            <p className="mt-2 text-xs text-[color:var(--color-text-muted)]">
-              Hinta sisältää KBT:n kuluvan vuoden jäsenmaksun (20 €).
-            </p>
-            {site.peruskurssit.seasonNote && (
-              <p className="mt-3 inline-flex items-start gap-2 rounded-lg border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/10 px-3 py-2 text-xs text-[color:var(--color-accent)]">
-                {site.peruskurssit.seasonNote}
-              </p>
-            )}
           </section>
         )}
 
