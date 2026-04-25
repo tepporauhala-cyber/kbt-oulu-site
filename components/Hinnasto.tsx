@@ -4,12 +4,6 @@ import { Check } from "lucide-react";
 import { site } from "@/lib/content";
 import { openMaksuModal } from "@/lib/maksuModal";
 
-const muutMaksutPerks = [
-  "Jäsenmaksu vuosittain",
-  "Kertamaksu treeniin",
-  "Yksityistunnit Lepalta",
-];
-
 export default function Hinnasto() {
   return (
     <section id="hinnasto" className="section">
@@ -21,7 +15,7 @@ export default function Hinnasto() {
           tilisiirtona — ei tarvetta kuukausilaskutuksille tai sopimuksille.
         </p>
 
-        <ul className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <ul className="mt-12 grid gap-5 md:grid-cols-3">
           {site.hinnasto.map((tier) => (
             <li
               key={tier.id}
@@ -36,10 +30,8 @@ export default function Hinnasto() {
                   Suosituin
                 </span>
               )}
-              <h3 className="text-base font-semibold uppercase tracking-wider text-white">
-                {tier.name}
-              </h3>
-              <p className="mt-3 font-[family-name:var(--font-display)] text-4xl tracking-wide text-white">
+              <h3 className="text-lg font-semibold text-white">{tier.name}</h3>
+              <p className="mt-3 font-[family-name:var(--font-display)] text-5xl tracking-wide text-white">
                 {tier.price}
               </p>
               <ul className="mt-6 flex flex-col gap-2 text-sm text-[color:var(--color-text-muted)]">
@@ -63,34 +55,6 @@ export default function Hinnasto() {
               </button>
             </li>
           ))}
-
-          <li className="card relative flex flex-col">
-            <h3 className="text-base font-semibold uppercase tracking-wider text-white">
-              Muut maksut
-            </h3>
-            <p className="mt-3 font-[family-name:var(--font-display)] text-4xl tracking-wide text-white">
-              Alk. 10 €
-            </p>
-            <ul className="mt-6 flex flex-col gap-2 text-sm text-[color:var(--color-text-muted)]">
-              {muutMaksutPerks.map((perk) => (
-                <li key={perk} className="flex items-start gap-2">
-                  <Check
-                    aria-hidden="true"
-                    size={18}
-                    className="mt-0.5 shrink-0 text-[color:var(--color-accent)]"
-                  />
-                  <span>{perk}</span>
-                </li>
-              ))}
-            </ul>
-            <button
-              type="button"
-              onClick={openMaksuModal}
-              className="btn-ghost mt-auto pt-6 w-full"
-            >
-              Lue lisää
-            </button>
-          </li>
         </ul>
 
         {site.hinnastoNotes.length > 0 && (
