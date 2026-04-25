@@ -50,10 +50,10 @@ export const metadata: Metadata = {
     title: `${site.brand.name} — kamppailulajeja Oulussa`,
     description: site.brand.description,
   },
-  robots:
-    process.env.NEXT_PUBLIC_ALLOW_INDEX === "true"
-      ? { index: true, follow: true }
-      : { index: false, follow: false, noarchive: true, nosnippet: true },
+  alternates: {
+    canonical: "https://kickboxingteam.com",
+  },
+  robots: { index: true, follow: true },
 };
 
 export const viewport: Viewport = {

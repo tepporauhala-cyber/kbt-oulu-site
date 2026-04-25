@@ -128,17 +128,18 @@ Google Mapsin iframe latautuu kun kävijä vierittää sinne (`loading="lazy"`).
 
 ## Hakukoneindeksointi
 
-Ympäristömuuttuja `NEXT_PUBLIC_ALLOW_INDEX` ohjaa indeksointia:
+Indeksointi on **päällä oletuksena** — `robots.txt` sallii kaikki hakukoneet ja
+sivu lähettää `<meta name="robots" content="index, follow">`. Sivun
+`canonical`-URL osoittaa `https://kickboxingteam.com`:iin, joten Google ei
+indeksoi Vercelin esikatselu-URL:ia erikseen vaikka se olisikin saavutettavissa.
 
-- **Asettamatta tai `false`** → `robots.txt` blokkaa kaikki hakukoneet ja sivu lähettää `<meta name="robots" content="noindex, nofollow">`. Käytä Vercelin testi-URL:eissä.
-- **`true`** → sallii indeksoinnin. Aseta vasta kun sivut viedään lopulliselle `kickboxingteam.com`-domainille.
+`/sitemap.xml` ja `/robots.txt` generoidaan automaattisesti buildissa.
 
 ## Deploy
 
 1. Push GitHubiin
 2. Vercel: Import → valitse repo
 3. Ympäristömuuttujat:
-   - `NEXT_PUBLIC_SCHEDULE_CSV_URL` (kun Sheets-CSV on saatavilla)
-   - `NEXT_PUBLIC_ALLOW_INDEX=false` testi-URL:lle
+   - `NEXT_PUBLIC_SCHEDULE_CSV_URL` — Google Sheets CSV-URL (treeniajat)
 4. Lopulliseen tuotantoon: yhdistä `kickboxingteam.com` Vercelin domain settingsissä,
-   Cloudflare DNS → CNAME Verceliin, ja vaihda `NEXT_PUBLIC_ALLOW_INDEX=true`
+   Cloudflare DNS → CNAME Verceliin. Indeksointi on päällä automaattisesti.
