@@ -5,7 +5,6 @@ import Peruskurssit from "@/components/Peruskurssit";
 import Valmentajat from "@/components/Valmentajat";
 import Aloita from "@/components/Aloita";
 import Hinnasto from "@/components/Hinnasto";
-import Maksuohjeet from "@/components/Maksuohjeet";
 import Treeniajat from "@/components/Treeniajat";
 import Sijainti from "@/components/Sijainti";
 import Media from "@/components/Media";
@@ -25,7 +24,6 @@ export default function HomePage() {
         <Valmentajat />
         <Aloita />
         <Hinnasto />
-        <Maksuohjeet />
         <Treeniajat />
         <Sijainti />
         <Media />
