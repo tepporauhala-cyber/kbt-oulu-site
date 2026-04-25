@@ -19,6 +19,8 @@ export type Valmentaja = {
   role: string;
   bio: string;
   image?: string;
+  instagram?: string;
+  instagramHandle?: string;
 };
 
 export type HintaTier = {
