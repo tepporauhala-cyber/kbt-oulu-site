@@ -8,7 +8,6 @@ const sportKeywords: Array<{ keyword: string; classes: string }> = [
   { keyword: "Lukkopaini", classes: "bg-emerald-500/15 text-emerald-300" },
   { keyword: "Matto", classes: "bg-emerald-500/15 text-emerald-300" },
   { keyword: "Potkunyrkkeily", classes: "bg-amber-500/15 text-amber-300" },
-  { keyword: "Thainyrkkeily", classes: "bg-orange-500/15 text-orange-300" },
   { keyword: "BJJ", classes: "bg-emerald-500/15 text-emerald-300" },
 ];
 

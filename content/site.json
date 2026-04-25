@@ -4,7 +4,7 @@
     "name": "Kickboxing Team Oulu",
     "shortName": "KBT",
     "tagline": "Kamppailulajeja kaikentasoisille — vuodesta 2002",
-    "description": "Kickboxing Team Oulu on oululainen kamppailulajiseura. Valikoimassa MMA, potkunyrkkeily, thainyrkkeily ja brasilialainen jujutsu. Tervetuloa kokeilemaan ensimmäinen treeni veloituksetta."
+    "description": "Kickboxing Team Oulu on oululainen kamppailulajiseura. Valikoimassa MMA, potkunyrkkeily ja brasilialainen jujutsu. Tervetuloa kokeilemaan ensimmäinen treeni veloituksetta."
   },
   "contact": {
     "email": "leif.stenius@gmail.com",
@@ -40,12 +40,6 @@
       "description": "Klassinen kickboxing — nyrkit ja potkut. Erinomainen pohja kamppailulajiharjoittelulle ja kunnolle."
     },
     {
-      "id": "thainyrkkeily",
-      "name": "Thainyrkkeily",
-      "icon": "flame",
-      "description": "Muay thai eli kahdeksan raajan taito: nyrkit, potkut, polvet ja kyynärpäät. Tehokasta voima- ja kuntoharjoittelua."
-    },
-    {
       "id": "bjj",
       "name": "Brasilialainen jujutsu",
       "icon": "users",
@@ -55,7 +49,7 @@
   "valmentajat": [
     {
       "name": "Leif \"Lepa\" Stenius",
-      "role": "Päävalmentaja · KB, MT, MMA, SW",
+      "role": "Päävalmentaja · KB, MMA, SW",
       "bio": [
         "Yksi suomalaisen potkunyrkkeilyn pitkän linjan vaikuttajista ja Kickboxing Team Oulun päävalmentaja. Aloitti kamppailulajien parissa jo 1980-luvulla ja on valmentanut aktiivisesti yli neljän vuosikymmenen ajan.",
         "Lepan tausta rakentuu vahvasta kilpailu- ja valmennuskokemuksesta. Vuosien aikana hänen valmennuksestaan on noussut useita SM-mitalisteja ja kansainvälisillä areenoilla menestyneitä ottelijoita arvokisasijoituksille asti."
