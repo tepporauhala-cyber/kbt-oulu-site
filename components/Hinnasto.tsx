@@ -1,7 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import { Check, X, CreditCard, Wallet, Info, ExternalLink } from "lucide-react";
+import {
+  Check,
+  X,
+  CreditCard,
+  Wallet,
+  Info,
+  ExternalLink,
+  GraduationCap,
+  Receipt,
+  Calendar,
+  ArrowRight,
+} from "lucide-react";
 import { site } from "@/lib/content";
 
 export default function Hinnasto() {
@@ -62,6 +73,61 @@ export default function Hinnasto() {
             </li>
           ))}
         </ul>
+
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          <div className="card flex flex-col">
+            <div className="flex items-center gap-2 text-[color:var(--color-accent)]">
+              <GraduationCap aria-hidden="true" size={18} />
+              <h3 className="text-lg font-semibold text-white">Peruskurssi</h3>
+            </div>
+            <ul className="mt-4 flex flex-col divide-y divide-white/5">
+              {site.peruskurssit.prices.map((p) => (
+                <li
+                  key={p.label}
+                  className="flex items-baseline justify-between gap-4 py-3 first:pt-0 last:pb-0"
+                >
+                  <span className="text-sm text-[color:var(--color-text-muted)]">{p.label}</span>
+                  <span className="font-[family-name:var(--font-display)] text-2xl tracking-wide text-white">
+                    {p.price}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-4 text-xs text-[color:var(--color-text-muted)]">
+              Hinta sisältää KBT:n kuluvan vuoden jäsenmaksun (20 €).
+            </p>
+            {site.peruskurssit.seasonNote && (
+              <p className="mt-4 inline-flex items-start gap-2 rounded-lg border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/10 px-3 py-2 text-xs text-[color:var(--color-accent)]">
+                <Calendar aria-hidden="true" size={14} className="mt-0.5 shrink-0" />
+                <span>{site.peruskurssit.seasonNote}</span>
+              </p>
+            )}
+            <a href="#peruskurssit" className="btn-ghost mt-auto pt-6 w-full">
+              Lue lisää peruskurssista
+              <ArrowRight aria-hidden="true" size={16} />
+            </a>
+          </div>
+
+          <div className="card flex flex-col">
+            <div className="flex items-center gap-2 text-[color:var(--color-accent)]">
+              <Receipt aria-hidden="true" size={18} />
+              <h3 className="text-lg font-semibold text-white">Muut maksut</h3>
+            </div>
+            <ul className="mt-4 flex flex-col divide-y divide-white/5">
+              {site.lisamaksut.map((item) => (
+                <li key={item.label} className="py-3 first:pt-0 last:pb-0">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <span className="text-sm font-medium text-white">{item.label}</span>
+                    <span className="font-[family-name:var(--font-display)] text-xl tracking-wide text-[color:var(--color-accent)]">
+                      {item.price}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-xs text-[color:var(--color-text-muted)]">{item.note}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
 
         {site.hinnastoNotes.length > 0 && (
           <div className="mt-10 grid gap-2 text-sm text-[color:var(--color-text-muted)]">

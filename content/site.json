@@ -102,6 +102,11 @@
       "label": "Kertamaksu",
       "price": "10 €",
       "note": "Käteisellä ennen treenin alkua, kun haluat käydä yksittäisellä tunnilla."
+    },
+    {
+      "label": "Yksityistunnit",
+      "price": "Tarjous",
+      "note": "Yksityis- ja ryhmätunneista voi kysyä tarjousta suoraan Lepalta. Koululais- ja opiskelijaryhmille edulliset hinnat."
     }
   ],
   "peruskurssit": {
@@ -154,10 +159,6 @@
       {
         "title": "Tauotus",
         "body": "Maksettu harjoitusaika voidaan laittaa tauolle erikseen sopimalla, jos harjoittelu estyy pidemmäksi aikaa."
-      },
-      {
-        "title": "Yksityistunnit",
-        "body": "Yksityis- ja ryhmätunneista voi kysyä tarjousta suoraan Lepalta. Koululais- ja opiskelijaryhmille edulliset hinnat."
       },
       {
         "title": "Vakuutus ja lisenssi",
