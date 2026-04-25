@@ -37,6 +37,16 @@ export type InstagramPost = {
   alt: string;
 };
 
+export type MediaItem = {
+  title: string;
+  excerpt: string;
+  publisher: string;
+  url: string;
+  image: string;
+  imageAlt: string;
+  publishedAt: string;
+};
+
 export type SiteContent = {
   brand: {
     name: string;
@@ -63,6 +73,7 @@ export type SiteContent = {
   valmentajat: Valmentaja[];
   hinnasto: HintaTier[];
   hinnastoNotes: string[];
+  media: MediaItem[];
   instagramPosts: InstagramPost[];
 };
 

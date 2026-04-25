@@ -37,7 +37,26 @@ Skeema:
 - `valmentajat` — nimi, rooli, bio (lisätään myöhemmin)
 - `hinnasto` — kausimaksut. `featured: true` korostaa kortin
 - `hinnastoNotes` — lisähuomiot hinnaston alle
+- `media` — lehdistöjuttujen lista (otsikko, kuvaus, julkaisija, URL, kuva, julkaisupäivä)
 - `instagramPosts` — 4–6 IG-postausta (url + image + alt)
+
+### 1b. Media-osio — uuden jutun lisääminen
+
+1. Tallenna juttukuva `public/images/media/`-kansioon, esim. `lehti-2026-05.jpg`.
+   Kuvasuhde 5:3 näyttää siisteimmältä (esim. 1000×600 px).
+2. Avaa `content/site.json`, lisää `media`-listan alkuun uusi objekti:
+   ```json
+   {
+     "title": "Jutun otsikko",
+     "excerpt": "Lyhyt kuvaus 1–2 lausetta.",
+     "publisher": "Lehden nimi",
+     "url": "https://...",
+     "image": "/images/media/lehti-2026-05.jpg",
+     "imageAlt": "Kuvateksti",
+     "publishedAt": "2026-05-15"
+   }
+   ```
+3. Committaa, pushaa — Vercel deployaa automaattisesti
 
 ### 2. Treeniajat — Google Sheets
 

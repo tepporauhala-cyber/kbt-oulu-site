@@ -5,6 +5,7 @@ import Valmentajat from "@/components/Valmentajat";
 import Hinnasto from "@/components/Hinnasto";
 import Treeniajat from "@/components/Treeniajat";
 import Sijainti from "@/components/Sijainti";
+import Media from "@/components/Media";
 import InstagramGrid from "@/components/InstagramGrid";
 import Yhteystiedot from "@/components/Yhteystiedot";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function HomePage() {
         <Hinnasto />
         <Treeniajat />
         <Sijainti />
+        <Media />
         <InstagramGrid />
         <Yhteystiedot />
       </main>

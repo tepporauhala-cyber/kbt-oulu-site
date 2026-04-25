@@ -93,6 +93,17 @@
     "Maksu IBAN-tilille viestikenttään harrastajan nimi ja kausi.",
     "Ensimmäinen tutustumiskerta on aina maksuton."
   ],
+  "media": [
+    {
+      "title": "Kickboxing Team Oulu menestyi SM-kisoissa ylivoimaisesti",
+      "excerpt": "Kickboxing Team Oulu menestyi SM-kisoissa voittamalla seitsemän kultaa. Valmentaja avaa menestyksen taustat ja tulevat tavoitteet.",
+      "publisher": "Hakissa.fi",
+      "url": "https://www.hakissa.fi/haastattelut/team-oulu-menestyi-sm-kisoissa/",
+      "image": "/images/media/hakissa-sm-2026.jpg",
+      "imageAlt": "Leif \"Lepa\" Stenius haastattelussa Hakissa.fi:lle",
+      "publishedAt": "2026-04-24"
+    }
+  ],
   "instagramPosts": [
     { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-1.svg", "alt": "Instagram-kuva 1 — lisätään pian" },
     { "url": "https://www.instagram.com/kickboxingteam/", "image": "/images/ig-placeholder-2.svg", "alt": "Instagram-kuva 2 — lisätään pian" },

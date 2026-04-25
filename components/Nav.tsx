@@ -11,6 +11,7 @@ const links = [
   { href: "#hinnasto", label: "Hinnasto" },
   { href: "#treeniajat", label: "Treeniajat" },
   { href: "#sijainti", label: "Sijainti" },
+  { href: "#media", label: "Media" },
   { href: "#yhteystiedot", label: "Yhteystiedot" },
 ];
 
