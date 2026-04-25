@@ -1,5 +1,8 @@
+"use client";
+
 import { GraduationCap, Check, Calendar } from "lucide-react";
 import { site } from "@/lib/content";
+import { openMaksuModal } from "@/lib/maksuModal";
 
 export default function Peruskurssit() {
   const pk = site.peruskurssit;
@@ -21,41 +24,69 @@ export default function Peruskurssit() {
           </p>
         )}
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-2">
-          <div className="card">
-            <h3 className="text-lg font-semibold text-white">Miten mukaan?</h3>
-            <ul className="mt-4 flex flex-col gap-3">
-              {pk.joinSteps.map((step) => (
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
+          <div className="card flex flex-col gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-white">Miten mukaan?</h3>
+              <ul className="mt-4 flex flex-col gap-3">
+                {pk.joinSteps.map((step) => (
+                  <li
+                    key={step}
+                    className="flex items-start gap-3 text-sm text-[color:var(--color-text-muted)]"
+                  >
+                    <Check
+                      aria-hidden="true"
+                      size={18}
+                      className="mt-0.5 shrink-0 text-[color:var(--color-accent)]"
+                    />
+                    <span>{step}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold text-white">Mitä tarvitset?</h3>
+              <ul className="mt-4 flex flex-col gap-2 text-sm text-[color:var(--color-text-muted)]">
+                {pk.requirements.map((req) => (
+                  <li key={req.label} className="flex items-baseline gap-3">
+                    <span className="text-xs uppercase tracking-wider text-[color:var(--color-accent)]">
+                      {req.label}
+                    </span>
+                    <span>{req.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <div className="card flex flex-col">
+            <h3 className="text-base font-semibold uppercase tracking-wider text-white">
+              Peruskurssi
+            </h3>
+            <ul className="mt-5 flex flex-col divide-y divide-white/5">
+              {pk.prices.map((p) => (
                 <li
-                  key={step}
-                  className="flex items-start gap-3 text-sm text-[color:var(--color-text-muted)]"
+                  key={p.label}
+                  className="flex items-baseline justify-between gap-4 py-3 first:pt-0 last:pb-0"
                 >
-                  <Check
-                    aria-hidden="true"
-                    size={18}
-                    className="mt-0.5 shrink-0 text-[color:var(--color-accent)]"
-                  />
-                  <span>{step}</span>
+                  <span className="text-sm text-[color:var(--color-text-muted)]">{p.label}</span>
+                  <span className="font-[family-name:var(--font-display)] text-2xl tracking-wide text-white">
+                    {p.price}
+                  </span>
                 </li>
               ))}
             </ul>
-          </div>
-
-          <div className="card">
-            <h3 className="text-lg font-semibold text-white">Mitä tarvitset?</h3>
-            <dl className="mt-4 flex flex-col gap-3">
-              {pk.requirements.map((req) => (
-                <div
-                  key={req.label}
-                  className="rounded-xl border border-white/10 bg-white/[0.03] p-4"
-                >
-                  <dt className="text-xs uppercase tracking-wider text-[color:var(--color-accent)]">
-                    {req.label}
-                  </dt>
-                  <dd className="mt-1 text-sm text-white">{req.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <p className="mt-4 text-xs text-[color:var(--color-text-muted)]">
+              Hinta sisältää KBT:n kuluvan vuoden jäsenmaksun (20 €).
+            </p>
+            <button
+              type="button"
+              onClick={openMaksuModal}
+              className="btn-ghost mt-auto pt-6 w-full"
+            >
+              Aloita harjoittelu
+            </button>
           </div>
         </div>
       </div>
