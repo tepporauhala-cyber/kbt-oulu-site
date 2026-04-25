@@ -21,8 +21,8 @@ export default function HomePage() {
       <main id="main">
         <Hero />
         <Lajit />
-        <Peruskurssit />
         <Valmentajat />
+        <Peruskurssit />
         <Aloita />
         <Hinnasto />
         <Treeniajat />

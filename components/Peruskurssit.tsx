@@ -8,7 +8,7 @@ export default function Peruskurssit() {
   const pk = site.peruskurssit;
 
   return (
-    <section id="peruskurssit" className="section bg-[color:var(--color-bg-soft)]">
+    <section id="peruskurssit" className="section">
       <div className="container-page">
         <p className="eyebrow inline-flex items-center gap-2">
           <GraduationCap aria-hidden="true" size={14} />
