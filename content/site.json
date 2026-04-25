@@ -17,8 +17,8 @@
       "postalCode": "90230",
       "city": "Oulu"
     },
-    "mapsEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1903.2!2d25.476!3d65.0094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNjXCsDAwJzMzLjgiTiAyNcKwMjgnMzMuNiJF!5e0!3m2!1sfi!2sfi!4v1700000000000",
-    "mapsLinkUrl": "https://maps.google.com/?q=V%C3%A4rt%C3%B6n+liikuntahalli+Kurkelankuja+2+Oulu"
+    "mapsEmbedUrl": "https://maps.google.com/maps?q=V%C3%A4rt%C3%B6n+liikuntahalli%2C+Kurkelankuja+2%2C+90230+Oulu&hl=fi&t=&z=15&ie=UTF8&iwloc=B&output=embed",
+    "mapsLinkUrl": "https://www.google.com/maps/dir/?api=1&destination=V%C3%A4rt%C3%B6n+liikuntahalli%2C+Kurkelankuja+2%2C+90230+Oulu"
   },
   "social": {
     "instagram": "https://www.instagram.com/kickboxingteam/",

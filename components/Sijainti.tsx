@@ -1,4 +1,4 @@
-import { MapPin, ExternalLink } from "lucide-react";
+import { MapPin, ExternalLink, Navigation } from "lucide-react";
 import { site } from "@/lib/content";
 
 export default function Sijainti() {
@@ -40,7 +40,7 @@ export default function Sijainti() {
             </p>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-white/10">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10">
             <iframe
               src={mapsEmbedUrl}
               title={`${address.venue} kartalla`}
@@ -49,6 +49,16 @@ export default function Sijainti() {
               className="h-full min-h-[320px] w-full"
               allowFullScreen
             />
+            <a
+              href={mapsLinkUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Suunnista Värtön liikuntahalliin Google Mapsissa"
+              className="absolute right-3 top-3 inline-flex items-center gap-2 rounded-full bg-[color:var(--color-bg)]/95 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-black/40 ring-1 ring-white/10 backdrop-blur transition hover:bg-[color:var(--color-accent)] hover:ring-[color:var(--color-accent)]"
+            >
+              <Navigation aria-hidden="true" size={16} />
+              Suunnista
+            </a>
           </div>
         </div>
       </div>
