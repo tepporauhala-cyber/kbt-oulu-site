@@ -42,7 +42,7 @@ export default function Hero() {
           <div className="relative h-full overflow-hidden rounded-3xl border border-white/10 shadow-2xl shadow-black/50">
             <Image
               src="/images/hero-bg.jpg"
-              alt="Treenikuva Värtön salilta"
+              alt="KBT:n ottelija voiton hetkellä kehässä"
               fill
               priority
               sizes="(min-width: 1024px) 28rem, 80vw"
