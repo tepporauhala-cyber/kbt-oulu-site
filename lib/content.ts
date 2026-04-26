@@ -7,11 +7,22 @@ export type Address = {
   city: string;
 };
 
+export type LajiKeyFact = { label: string; value: string };
+
+export type LajiFederation = {
+  name: string;
+  url: string;
+};
+
 export type Laji = {
   id: string;
   name: string;
   icon: string;
   description: string;
+  longDescription?: string[];
+  images?: string[];
+  keyFacts?: LajiKeyFact[];
+  federation?: LajiFederation;
 };
 
 export type Valmentaja = {

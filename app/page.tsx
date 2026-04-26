@@ -11,6 +11,7 @@ import Media from "@/components/Media";
 import Yhteystiedot from "@/components/Yhteystiedot";
 import Footer from "@/components/Footer";
 import MaksuModal from "@/components/MaksuModal";
+import LajiModal from "@/components/LajiModal";
 
 export const revalidate = 600;
 
@@ -32,6 +33,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <MaksuModal />
+      <LajiModal />
     </>
   );
 }
