@@ -287,6 +287,42 @@
       "image": "/images/media/hakissa-sm-2026.jpg",
       "imageAlt": "Leif \"Lepa\" Stenius haastattelussa Hakissa.fi:lle",
       "publishedAt": "2026-04-24"
+    },
+    {
+      "title": "Aholami nousi kaksi sarjaa – KBT Oulu juhli 7 SM-kultaa",
+      "excerpt": "Potkunyrkkeilyn SM-kisoissa Kickboxing Team Oulu dominoi seitsemällä mestaruudella. Aholami nousi kaksi sarjaa ja iski kultaan.",
+      "publisher": "Hakissa.fi",
+      "url": "https://www.hakissa.fi/uutiset/aholami-nousi-kaksi-sarjaa-kbt-oulu/",
+      "image": "/images/media/aholami-sm-2026.jpg",
+      "imageAlt": "Alireza Aholami kehässä ennen ottelua",
+      "publishedAt": "2026-04-20"
+    },
+    {
+      "title": "Lauri Suomela ja Casper Hansson kohtasivat The Rivals Fightingissa",
+      "excerpt": "Lauri Suomela ja Casper Hansson kohtasivat Kempeleessä The Rivals Fightingissa. Suomela jatkoi voittoputkeaan keskeytysvoitolla.",
+      "publisher": "Hakissa.fi",
+      "url": "https://www.hakissa.fi/uutiset/lauri-suomela-ja-casper-hansson-the-rivals/",
+      "image": "/images/media/suomela-hansson-2026.jpg",
+      "imageAlt": "Lauri Suomela ja Casper Hansson kehässä",
+      "publishedAt": "2026-03-23"
+    },
+    {
+      "title": "Oululaisen Pankolaisen ammattilaisdebyytti Oulu Strike Nightissa",
+      "excerpt": "Oululainen potkunyrkkeilijä Jaakko Pankolainen aloitti potkunyrkkeilyn pari vuotta sitten ja tekee ammattilaisdebyyttinsä Oulu Strike Nightissa.",
+      "publisher": "Kaleva",
+      "url": "https://www.kaleva.fi/kaksi-ja-puoli-vuotta-sitten-oululainen-jaakko-pan/11733483",
+      "image": "/images/media/pankolainen-kaleva-2025.jpg",
+      "imageAlt": "Jaakko Pankolainen treenaamassa",
+      "publishedAt": "2025-08-15"
+    },
+    {
+      "title": "Oulun alueleirillä harjoiteltiin taktista liikkumista",
+      "excerpt": "Oulussa pidettiin alueleiri lauantaina 7. joulukuuta. Leiriä isännöi Kickboxing Team Oulu, ja leirin veti Pasi Rantala 5. dan.",
+      "publisher": "Suomen Potkunyrkkeilyliitto",
+      "url": "https://www.kickboxing.fi/2024/12/10/oulun-alueleirilla-harjoiteltiin-taktista-liikkumista/",
+      "image": "/images/media/spnl-alueleiri-2024.jpg",
+      "imageAlt": "Oulun alueleiri 2024 — taktista liikkumista",
+      "publishedAt": "2024-12-10"
     }
   ]
 }
