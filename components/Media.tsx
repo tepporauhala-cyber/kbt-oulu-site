@@ -27,14 +27,14 @@ export default function Media() {
           Haastatteluja, kilpailuraportteja ja tuoreita kuulumisia seuran toiminnasta.
         </p>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr] items-start">
+        <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr] lg:items-stretch">
           {hasMedia && (
-            <div>
+            <div className="flex flex-col">
               <p className="eyebrow inline-flex items-center gap-2">
                 <Newspaper aria-hidden="true" size={14} />
                 Lehdistössä
               </p>
-              <ul className="mt-4 flex max-h-[720px] flex-col gap-6 overflow-y-auto overscroll-contain pr-2">
+              <ul className="mt-4 flex max-h-[720px] min-h-0 flex-1 flex-col gap-6 overflow-y-auto overscroll-contain pr-2">
                 {site.media.map((item) => (
                 <li key={item.url}>
                   <a
@@ -76,12 +76,12 @@ export default function Media() {
           )}
 
           {hasAjankohtaista && (
-            <div>
+            <div className="flex flex-col">
               <p className="eyebrow inline-flex items-center gap-2">
                 <Instagram aria-hidden="true" size={14} />
                 Ajankohtaista
               </p>
-              <ul className="mt-4 flex max-h-[720px] flex-col gap-3 overflow-y-auto overscroll-contain pr-2">
+              <ul className="mt-4 flex max-h-[720px] min-h-0 flex-1 flex-col gap-3 overflow-y-auto overscroll-contain pr-2">
                 {site.ajankohtaista.map((item, idx) => (
                   <li key={`${item.url}-${idx}`}>
                     <a
