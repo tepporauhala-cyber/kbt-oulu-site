@@ -123,12 +123,6 @@ export default function LajiModal({
               </div>
             )}
 
-            {laji.tags && laji.tags.length > 0 && (
-              <p className="mt-4 text-xs uppercase tracking-wider text-[color:var(--color-accent)]/80">
-                {laji.tags.join(" · ")}
-              </p>
-            )}
-
             <div className="mt-6 rounded-xl border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/5 p-5">
               <p className="inline-flex items-center gap-2 text-sm font-medium text-white">
                 <Calendar
