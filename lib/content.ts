@@ -21,7 +21,7 @@ export type Laji = {
   description: string;
   longDescription?: string[];
   images?: string[];
-  video?: string;
+  videos?: string[];
   keyFacts?: LajiKeyFact[];
   federation?: LajiFederation;
   tags?: string[];

@@ -62,36 +62,21 @@ export default function LajiModal({
     >
       {laji && (
         <div className="max-h-[85vh] overflow-y-auto">
-          {(laji.video || (laji.images && laji.images.length > 0)) && (
-            <div className="relative aspect-[16/9] w-full overflow-hidden bg-black">
-              {laji.video ? (
-                <video
-                  src={laji.video}
-                  poster={laji.images?.[0]}
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              ) : (
-                laji.images?.[0] && (
-                  <>
-                    <Image
-                      src={laji.images[0]}
-                      alt=""
-                      fill
-                      sizes="56rem"
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[color:var(--color-bg-soft)]" />
-                  </>
-                )
-              )}
+          {laji.images && laji.images.length > 0 && (
+            <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <Image
+                src={laji.images[0]}
+                alt=""
+                fill
+                sizes="56rem"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[color:var(--color-bg-soft)]" />
               <button
                 type="button"
                 onClick={close}
                 aria-label="Sulje"
-                className="absolute right-4 top-4 z-10 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur hover:bg-black/80"
+                className="absolute right-4 top-4 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-black/60 text-white backdrop-blur hover:bg-black/80"
               >
                 <X aria-hidden="true" size={18} />
               </button>
@@ -171,23 +156,42 @@ export default function LajiModal({
               </dl>
             )}
 
-            {laji.images && laji.images.length > 1 && (
-              <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {laji.images.slice(1).map((src, idx) => (
-                  <li
-                    key={`${src}-${idx}`}
-                    className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10"
-                  >
-                    <Image
-                      src={src}
-                      alt=""
-                      fill
-                      sizes="(min-width: 640px) 18rem, 50vw"
-                      className="object-cover"
-                    />
-                  </li>
-                ))}
-              </ul>
+            {((laji.images && laji.images.length > 1) ||
+              (laji.videos && laji.videos.length > 0)) && (
+              <section className="mt-8">
+                <p className="eyebrow">Galleria</p>
+                <ul className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3">
+                  {laji.videos?.map((src, idx) => (
+                    <li
+                      key={`vid-${src}-${idx}`}
+                      className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black"
+                    >
+                      <video
+                        src={src}
+                        poster={laji.images?.[0]}
+                        controls
+                        playsInline
+                        preload="metadata"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    </li>
+                  ))}
+                  {laji.images?.slice(1).map((src, idx) => (
+                    <li
+                      key={`img-${src}-${idx}`}
+                      className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10"
+                    >
+                      <Image
+                        src={src}
+                        alt=""
+                        fill
+                        sizes="(min-width: 640px) 18rem, 50vw"
+                        className="object-cover"
+                      />
+                    </li>
+                  ))}
+                </ul>
+              </section>
             )}
 
             <div className="mt-8 flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-6">
