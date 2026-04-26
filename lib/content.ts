@@ -23,6 +23,7 @@ export type Laji = {
   images?: string[];
   keyFacts?: LajiKeyFact[];
   federation?: LajiFederation;
+  tags?: string[];
 };
 
 export type Valmentaja = {

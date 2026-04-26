@@ -10,6 +10,7 @@ import {
   X,
   ExternalLink,
   ArrowRight,
+  Calendar,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { site } from "@/lib/content";
@@ -22,7 +23,11 @@ const icons: Record<string, LucideIcon> = {
   users: Users,
 };
 
-export default function LajiModal() {
+export default function LajiModal({
+  peruskurssiInfo = {},
+}: {
+  peruskurssiInfo?: Record<string, string>;
+}) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
   const [activeLajiId, setActiveLajiId] = useState<string | null>(null);
 
@@ -42,6 +47,9 @@ export default function LajiModal() {
 
   const laji = activeLajiId ? site.lajit.find((l) => l.id === activeLajiId) : null;
   const Icon = laji ? icons[laji.icon] ?? Swords : Swords;
+  const peruskurssiDate = laji
+    ? peruskurssiInfo[laji.id] ?? peruskurssiInfo[laji.name.toLowerCase()]
+    : undefined;
 
   return (
     <dialog
@@ -114,6 +122,29 @@ export default function LajiModal() {
                 ))}
               </div>
             )}
+
+            {laji.tags && laji.tags.length > 0 && (
+              <p className="mt-4 text-xs uppercase tracking-wider text-[color:var(--color-accent)]/80">
+                {laji.tags.join(" · ")}
+              </p>
+            )}
+
+            <div className="mt-6 rounded-xl border border-[color:var(--color-accent)]/30 bg-[color:var(--color-accent)]/5 p-5">
+              <p className="inline-flex items-center gap-2 text-sm font-medium text-white">
+                <Calendar
+                  aria-hidden="true"
+                  size={16}
+                  className="text-[color:var(--color-accent)]"
+                />
+                Seuraava peruskurssi:{" "}
+                <span className="text-[color:var(--color-accent)]">
+                  {peruskurssiDate ?? "ilmoitetaan pian"}
+                </span>
+              </p>
+              <p className="mt-2 text-xs text-[color:var(--color-text-muted)]">
+                Aiemmin harrastaneet voivat tulla mukaan suoraan sopivaan ryhmään.
+              </p>
+            </div>
 
             {laji.keyFacts && laji.keyFacts.length > 0 && (
               <dl className="mt-6 grid gap-3 sm:grid-cols-3">

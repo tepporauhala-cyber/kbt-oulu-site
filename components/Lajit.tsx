@@ -1,10 +1,11 @@
 import { site } from "@/lib/content";
-import { getPeruskurssiInfo } from "@/lib/schedule";
 import LajiCard from "./LajiCard";
 
-export default async function Lajit() {
-  const peruskurssiInfo = await getPeruskurssiInfo();
-
+export default function Lajit({
+  peruskurssiInfo,
+}: {
+  peruskurssiInfo: Record<string, string>;
+}) {
   return (
     <section id="lajit" className="section">
       <div className="container-page">
@@ -18,8 +19,8 @@ export default async function Lajit() {
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {site.lajit.map((laji) => {
             const date =
-              peruskurssiInfo.get(laji.id) ??
-              peruskurssiInfo.get(laji.name.toLowerCase());
+              peruskurssiInfo[laji.id] ??
+              peruskurssiInfo[laji.name.toLowerCase()];
             return (
               <li key={laji.id}>
                 <LajiCard laji={laji} peruskurssiDate={date} />

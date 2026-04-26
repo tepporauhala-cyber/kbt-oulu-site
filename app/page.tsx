@@ -12,16 +12,20 @@ import Yhteystiedot from "@/components/Yhteystiedot";
 import Footer from "@/components/Footer";
 import MaksuModal from "@/components/MaksuModal";
 import LajiModal from "@/components/LajiModal";
+import { getPeruskurssiInfo } from "@/lib/schedule";
 
 export const revalidate = 600;
 
-export default function HomePage() {
+export default async function HomePage() {
+  const peruskurssiMap = await getPeruskurssiInfo();
+  const peruskurssiInfo: Record<string, string> = Object.fromEntries(peruskurssiMap);
+
   return (
     <>
       <Nav />
       <main id="main">
         <Hero />
-        <Lajit />
+        <Lajit peruskurssiInfo={peruskurssiInfo} />
         <Valmentajat />
         <Peruskurssit />
         <Aloita />
@@ -33,7 +37,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <MaksuModal />
-      <LajiModal />
+      <LajiModal peruskurssiInfo={peruskurssiInfo} />
     </>
   );
 }

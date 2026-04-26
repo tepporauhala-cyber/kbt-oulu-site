@@ -36,9 +36,11 @@
       "name": "MMA",
       "icon": "swords",
       "description": "Vapaaottelu yhdistää lyönnit, potkut, painin ja sidontatekniikat. Soveltuu sekä kilpailijoille että kuntoharrastajille.",
+      "tags": ["monipuolinen", "fyysinen", "kilpailupolku"],
       "longDescription": [
-        "Vapaaottelu eli Mixed Martial Arts yhdistää lyönnit, potkut, painin ja sidontatekniikat yhdeksi kokonaislajiksi. Ottelu siirtyy pysty-vaiheesta matolle — ottelijan on hallittava monipuolisesti eri kamppailutyylejä.",
-        "KBT:n MMA-treeneissä kierrätetään tyylejä viikkokierron mukaan: pysty-treeneissä lyönnit ja potkut, matto-treeneissä painin ja sidonnat. Soveltuu kuntoharrastajille jotka etsivät monipuolista kamppailutreeniä, sekä kilpailijoille jotka tähtäävät SM-tasolle tai kansainvälisille areenoille."
+        "Vapaaottelu eli MMA yhdistää pystyottelun, painin ja mattokamppailun yhdeksi kokonaisuudeksi. Treeneissä harjoitellaan lyöntejä, potkuja, alasvientejä, hallintaa, puolustamista ja lopetustekniikoita turvallisesti ja vaiheittain.",
+        "MMA kehittää monipuolisesti kuntoa, kehonhallintaa, rohkeutta ja kamppailuymmärrystä. Laji sopii sekä kilpailusta kiinnostuneille että harrastajille, jotka haluavat treenata kokonaisvaltaisesti ja haastaa itseään.",
+        "Sopii sinulle, jos haluat oppia kamppailemaan kaikilla etäisyyksillä: pystyssä, painissa ja matossa."
       ],
       "images": ["/images/photos/keha.jpg", "/images/hero-bg.jpg"],
       "keyFacts": [
@@ -56,9 +58,11 @@
       "name": "Potkunyrkkeily",
       "icon": "shield",
       "description": "Klassinen kickboxing — lyönnit ja potkut. Erinomainen pohja kamppailulajiharjoittelulle ja kunnolle.",
+      "tags": ["kunto", "pystyottelu", "aloittelijaystävällinen"],
       "longDescription": [
-        "Potkunyrkkeily on pysty-laji jossa lyönnit ja potkut yhdistyvät tekniikkaan, ajoitukseen ja räjähtävyyteen. K-1 ja Full Contact -tyylit ovat KBT:n harjoittelun perusta, ja laji toimii erinomaisena pohjana minkä tahansa kamppailulajin jatko-opinnoille.",
-        "Treeneissä kehitetään tekniikkaa, kestävyyttä ja taktiikkaa. Soveltuu sekä kilpailutavoitteisille että fyysiseen kuntoon ja itseluottamukseen pyrkiville. Aikataulussa pystytreenit jaetaan noviiseille ja ylemmille — siirtyminen tasolta toiselle tapahtuu ohjaajan hyväksynnällä."
+        "Potkunyrkkeily on vauhdikas ja tehokas pystyottelulaji, jossa yhdistyvät lyönnit, potkut, liikkuminen ja puolustaminen. Harjoituksissa opetellaan tekniikkaa, väistöjä, torjuntoja, potku- ja lyöntiyhdistelmiä sekä kuntoa kehittäviä harjoitteita.",
+        "Laji antaa erinomaisen pohjan kamppailulajeihin ja sopii hyvin myös kuntoharjoitteluun. Treeneissä kehittyvät erityisesti kestävyys, räjähtävyys, koordinaatio, tasapaino ja itsevarmuus.",
+        "Sopii sinulle, jos haluat selkeän, tehokkaan ja fyysisen kamppailulajin, jossa pääset nopeasti tekemisen makuun."
       ],
       "images": ["/images/photos/voitto.jpg", "/images/photos/voittaja3.jpg"],
       "keyFacts": [
@@ -76,9 +80,11 @@
       "name": "Brasilialainen jujutsu",
       "icon": "users",
       "description": "Mattokamppailu ja sidonnat. Tekninen laji, joka kehittää ongelmanratkaisukykyä ja kehonhallintaa.",
+      "tags": ["tekninen", "matto", "kehonhallinta"],
       "longDescription": [
-        "Brasilialainen jujutsu (BJJ) on mattokamppailulaji jossa keskitytään sidontoihin, asemanvaihdoksiin ja lukkoihin. Filosofiana on että pienempikin voi voittaa isomman vastustajan tekniikalla, vipuvoimalla ja oikealla ajoituksella.",
-        "KBT:llä harjoitellaan sekä gi:llä (painipuvulla) että no-gi (ilman pukua). Aikataulussa nämä jakautuvat 'Matto - puku' ja 'Matto - nogi' -treeneihin. Laji kehittää teknistä ymmärrystä, kärsivällisyyttä ja kehonhallintaa — sopii sekä itsenäisenä kilpailulajina että täydennyksenä MMA-harjoitteluun."
+        "Brasilialainen jujutsu eli BJJ on tekninen mattokamppailulaji, jossa pyritään hallitsemaan vastustajaa maassa ja päättämään tilanne sidonnalla tai lukolla. Treeneissä harjoitellaan positioita, pakoja, hallintaa, kuristuksia, lukkoja ja rauhallista ongelmanratkaisua paineen alla.",
+        "BJJ ei perustu pelkkään voimaan, vaan tekniikkaan, ajoitukseen ja kehonkäyttöön. Siksi se sopii monen kokoisille ja eri lähtötasoilta tuleville harrastajille. Laji kehittää liikkuvuutta, kehonhallintaa, kärsivällisyyttä ja taktista ajattelua.",
+        "Sopii sinulle, jos pidät teknisestä harjoittelusta ja haluat oppia hallitsemaan tilanteita matossa."
       ],
       "images": ["/images/photos/halaus.jpg"],
       "keyFacts": [
@@ -96,9 +102,11 @@
       "name": "Lukkopaini",
       "icon": "flame",
       "description": "Submission wrestling — no-gi-mattokamppailua sidonnoilla ja lukoilla. Tehokas itsenäinen kilpailulaji ja täydennys MMA-treeniin.",
+      "tags": ["no-gi", "paini", "MMA-tuki"],
       "longDescription": [
-        "Lukkopaini (Submission Wrestling) on no-gi-mattokamppailulaji, joka keskittyy sidontoihin, kaatoihin ja lukkoihin ilman painipukua. Sukulaislaji BJJ:n no-gi-muodolle, mutta omilla painotuksillaan ja sääntökokonaisuudellaan.",
-        "Suomalaisella lukkopaini-perinteellä on pitkä historia ja aktiivinen kilpailuskene sekä kansallisesti että kansainvälisesti. KBT:llä lukkopaini täydentää MMA-treeniä ja toimii itsenäisenä kilpailulajina lauantain treeneissä."
+        "Lukkopaini on no-gi-mattokamppailua, jossa harjoitellaan painia, hallintaa, positioita ja lopetuksia ilman painipukua. Treeneissä keskitytään liikkumiseen, alasvienteihin, kontrolliin, pakoihin, kuristuksiin ja nivel-lukkoihin.",
+        "Lukkopaini on tehokas oma lajinsa, mutta se tukee erinomaisesti myös MMA-harjoittelua. Ilman pukua tempo on usein nopeampi, ja harjoittelu kehittää erityisesti reagointia, painetta, otteista vapautumista ja koko kehon käyttöä.",
+        "Sopii sinulle, jos haluat fyysisen ja teknisen mattolajin, jossa paini ja lopetukset yhdistyvät."
       ],
       "images": ["/images/photos/voittaja3.jpg"],
       "keyFacts": [

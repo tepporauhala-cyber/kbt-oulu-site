@@ -42,6 +42,11 @@ export default function LajiCard({
       </div>
       <h3 className="mt-5 text-xl font-semibold text-white">{laji.name}</h3>
       <p className="mt-2 text-sm text-[color:var(--color-text-muted)]">{laji.description}</p>
+      {laji.tags && laji.tags.length > 0 && (
+        <p className="mt-3 text-xs uppercase tracking-wider text-[color:var(--color-accent)]/80">
+          {laji.tags.join(" · ")}
+        </p>
+      )}
       {peruskurssiDate && (
         <p className="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs text-[color:var(--color-accent)]">
           <Calendar aria-hidden="true" size={12} />
