@@ -167,8 +167,7 @@ export default function LajiModal({
                       className="relative aspect-[4/3] overflow-hidden rounded-xl border border-white/10 bg-black"
                     >
                       <video
-                        src={src}
-                        poster={laji.images?.[0]}
+                        src={`${src}#t=0.1`}
                         controls
                         playsInline
                         preload="metadata"
