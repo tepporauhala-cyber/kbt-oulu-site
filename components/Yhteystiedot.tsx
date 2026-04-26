@@ -10,7 +10,8 @@ export default function Yhteystiedot() {
         <p className="mt-4 max-w-2xl text-[color:var(--color-text-muted)]">
           Ensimmäiset kaksi tutustumiskertaa ovat aina veloituksetta. Tule paikalle hieman ennen
           treenin alkua niin ohjaamme sinut oikeaan ryhmään. Voit myös kysyä etukäteen
-          sähköpostilla tai puhelimitse.
+          sähköpostilla tai puhelimitse. Salin ovet ovat lukossa, joten kysy avainkoodi ennen
+          ensimmäistä treeniäsi — saat sen sähköpostilla tai puhelimitse.
         </p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
