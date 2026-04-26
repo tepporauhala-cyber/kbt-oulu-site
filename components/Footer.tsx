@@ -63,11 +63,15 @@ export default function Footer() {
 
         <div className="section-divider mt-10" />
 
-        <div className="mt-6 flex flex-col gap-2 text-xs text-[color:var(--color-text-muted)] sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {year} {site.brand.name}. Sivut eivät käytä seuranta- tai mainosevästeitä; upotetut
-            palvelut (Google Maps, ulkoiset linkit) toimivat omilla ehdoillaan.
-          </p>
+        <div className="mt-6 flex flex-col gap-3 text-xs text-[color:var(--color-text-muted)] sm:flex-row sm:items-start sm:justify-between">
+          <div className="flex flex-col gap-1">
+            <p>© {year} {site.brand.name}.</p>
+            <p>
+              <span className="text-[color:var(--color-text)]">Tietosuoja:</span> Sivut eivät käytä
+              seuranta- tai mainosevästeitä. Upotetut palvelut (Google Maps, ulkoiset linkit)
+              toimivat omilla ehdoillaan.
+            </p>
+          </div>
           <address className="not-italic">
             <span className="text-[color:var(--color-text)]">
               {site.contact.postalAddress.label}:
