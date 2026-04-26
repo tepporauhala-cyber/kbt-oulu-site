@@ -1,6 +1,7 @@
-import { Swords, Shield, Flame, Users } from "lucide-react";
+import { Swords, Shield, Flame, Users, Calendar } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { site } from "@/lib/content";
+import { getPeruskurssiInfo } from "@/lib/schedule";
 
 const icons: Record<string, LucideIcon> = {
   swords: Swords,
@@ -9,7 +10,9 @@ const icons: Record<string, LucideIcon> = {
   users: Users,
 };
 
-export default function Lajit() {
+export default async function Lajit() {
+  const peruskurssiInfo = await getPeruskurssiInfo();
+
   return (
     <section id="lajit" className="section">
       <div className="container-page">
@@ -23,8 +26,14 @@ export default function Lajit() {
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {site.lajit.map((laji) => {
             const Icon = icons[laji.icon] ?? Swords;
+            const date =
+              peruskurssiInfo.get(laji.id) ??
+              peruskurssiInfo.get(laji.name.toLowerCase());
             return (
-              <li key={laji.id} className="card hover:-translate-y-1 hover:bg-white/[0.05]">
+              <li
+                key={laji.id}
+                className="card flex flex-col hover:-translate-y-1 hover:bg-white/[0.05]"
+              >
                 <span
                   aria-hidden="true"
                   className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[color:var(--color-accent)]/15 text-[color:var(--color-accent)]"
@@ -35,6 +44,12 @@ export default function Lajit() {
                 <p className="mt-2 text-sm text-[color:var(--color-text-muted)]">
                   {laji.description}
                 </p>
+                {date && (
+                  <p className="mt-auto pt-4 inline-flex items-center gap-1.5 text-xs text-[color:var(--color-accent)]">
+                    <Calendar aria-hidden="true" size={12} />
+                    Peruskurssi: {date}
+                  </p>
+                )}
               </li>
             );
           })}

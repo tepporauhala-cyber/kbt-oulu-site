@@ -127,6 +127,33 @@ export async function getSchedule(): Promise<Schedule> {
   }
 }
 
+export async function getPeruskurssiInfo(): Promise<Map<string, string>> {
+  const url = process.env.NEXT_PUBLIC_SCHEDULE_CSV_URL;
+  if (!url) return new Map();
+
+  try {
+    const res = await fetch(url, { next: { revalidate: 600 } });
+    if (!res.ok) return new Map();
+    const csv = await res.text();
+    const lines = csv
+      .replace(/\r\n/g, "\n")
+      .split("\n")
+      .filter((l) => l.trim().length > 0);
+    const map = new Map<string, string>();
+    for (let i = 1; i < lines.length; i++) {
+      const cells = parseCsvLine(lines[i]);
+      const laji = cells[5]?.trim();
+      const date = cells[6]?.trim();
+      if (laji && date) {
+        map.set(laji.toLowerCase(), date);
+      }
+    }
+    return map;
+  } catch {
+    return new Map();
+  }
+}
+
 export const DAY_ORDER = [
   "Maanantai",
   "Tiistai",
