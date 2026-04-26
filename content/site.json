@@ -93,7 +93,7 @@
         { "label": "Mukaan", "value": "Peruskurssilta (gi tai no-gi)" }
       ],
       "federation": {
-        "name": "Suomen BJJ-liitto",
+        "name": "Suomen Brasilialaisen Jujutsun Liitto",
         "url": "https://bjjliitto.fi/"
       }
     },
@@ -115,7 +115,7 @@
         { "label": "Mukaan", "value": "Peruskurssilta tai suoraan kokeneille" }
       ],
       "federation": {
-        "name": "ADCC Finland",
+        "name": "Suomen Lukkopainiliitto",
         "url": "https://www.adccfinland.com/"
       }
     }
