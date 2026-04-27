@@ -58,7 +58,7 @@ export default async function Treeniajat() {
         <p className="eyebrow">Treeniajat</p>
         <h2 className="mt-3 section-title">Viikon harjoitukset</h2>
         <p className="mt-4 max-w-2xl text-[color:var(--color-text-muted)]">
-          Aikataulu päivittyy automaattisesti. Mahdolliset muutokset ilmoitetaan Instagramissa.
+          Mahdolliset muutokset ilmoitetaan Instagramissa.
         </p>
 
         {schedule.source === "fallback" && (
